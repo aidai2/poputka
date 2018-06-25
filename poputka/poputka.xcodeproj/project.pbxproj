@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8437018E20E10B9500910A1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437018D20E10B9500910A1D /* AppDelegate.swift */; };
+		8437019020E10B9500910A1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437018F20E10B9500910A1D /* ViewController.swift */; };
+		8437019320E10B9500910A1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8437019120E10B9500910A1D /* Main.storyboard */; };
+		8437019520E10B9500910A1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8437019420E10B9500910A1D /* Assets.xcassets */; };
+		8437019820E10B9500910A1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8437019620E10B9500910A1D /* LaunchScreen.storyboard */; };
+		843701A320E10B9500910A1D /* poputkaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843701A220E10B9500910A1D /* poputkaTests.swift */; };
+		843701AE20E10B9500910A1D /* poputkaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843701AD20E10B9500910A1D /* poputkaUITests.swift */; };
+		843701BE20E10C8D00910A1D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 843701BD20E10C8D00910A1D /* Podfile */; };
+		CDF0B0EDA5D46C667F22D813 /* libPods-poputka.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D72D7CEA973CF9D6028E7E66 /* libPods-poputka.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8437019F20E10B9500910A1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8437018220E10B9500910A1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8437018920E10B9500910A1D;
+			remoteInfo = poputka;
+		};
+		843701AA20E10B9500910A1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8437018220E10B9500910A1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8437018920E10B9500910A1D;
+			remoteInfo = poputka;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		676D12FC5E4079CC5C47878D /* Pods-poputka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poputka.release.xcconfig"; path = "Pods/Target Support Files/Pods-poputka/Pods-poputka.release.xcconfig"; sourceTree = "<group>"; };
+		8437018A20E10B9500910A1D /* poputka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poputka.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8437018D20E10B9500910A1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8437018F20E10B9500910A1D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8437019220E10B9500910A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8437019420E10B9500910A1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8437019720E10B9500910A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8437019920E10B9500910A1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8437019E20E10B9500910A1D /* poputkaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = poputkaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		843701A220E10B9500910A1D /* poputkaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poputkaTests.swift; sourceTree = "<group>"; };
+		843701A420E10B9500910A1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843701A920E10B9500910A1D /* poputkaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = poputkaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		843701AD20E10B9500910A1D /* poputkaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poputkaUITests.swift; sourceTree = "<group>"; };
+		843701AF20E10B9500910A1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843701BD20E10C8D00910A1D /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5570D0E15473E474BBFB4A3 /* Pods-poputka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poputka.debug.xcconfig"; path = "Pods/Target Support Files/Pods-poputka/Pods-poputka.debug.xcconfig"; sourceTree = "<group>"; };
+		D72D7CEA973CF9D6028E7E66 /* libPods-poputka.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-poputka.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8437018720E10B9500910A1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDF0B0EDA5D46C667F22D813 /* libPods-poputka.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8437019B20E10B9500910A1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		843701A620E10B9500910A1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49DA0B28BEC71234E506AD74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5570D0E15473E474BBFB4A3 /* Pods-poputka.debug.xcconfig */,
+				676D12FC5E4079CC5C47878D /* Pods-poputka.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8437018120E10B9500910A1D = {
+			isa = PBXGroup;
+			children = (
+				843701BD20E10C8D00910A1D /* Podfile */,
+				8437018C20E10B9500910A1D /* poputka */,
+				843701A120E10B9500910A1D /* poputkaTests */,
+				843701AC20E10B9500910A1D /* poputkaUITests */,
+				8437018B20E10B9500910A1D /* Products */,
+				49DA0B28BEC71234E506AD74 /* Pods */,
+				E4168F0A8B2D0C1AE42F9B14 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8437018B20E10B9500910A1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8437018A20E10B9500910A1D /* poputka.app */,
+				8437019E20E10B9500910A1D /* poputkaTests.xctest */,
+				843701A920E10B9500910A1D /* poputkaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8437018C20E10B9500910A1D /* poputka */ = {
+			isa = PBXGroup;
+			children = (
+				8437018D20E10B9500910A1D /* AppDelegate.swift */,
+				8437018F20E10B9500910A1D /* ViewController.swift */,
+				8437019120E10B9500910A1D /* Main.storyboard */,
+				8437019420E10B9500910A1D /* Assets.xcassets */,
+				8437019620E10B9500910A1D /* LaunchScreen.storyboard */,
+				8437019920E10B9500910A1D /* Info.plist */,
+			);
+			path = poputka;
+			sourceTree = "<group>";
+		};
+		843701A120E10B9500910A1D /* poputkaTests */ = {
+			isa = PBXGroup;
+			children = (
+				843701A220E10B9500910A1D /* poputkaTests.swift */,
+				843701A420E10B9500910A1D /* Info.plist */,
+			);
+			path = poputkaTests;
+			sourceTree = "<group>";
+		};
+		843701AC20E10B9500910A1D /* poputkaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				843701AD20E10B9500910A1D /* poputkaUITests.swift */,
+				843701AF20E10B9500910A1D /* Info.plist */,
+			);
+			path = poputkaUITests;
+			sourceTree = "<group>";
+		};
+		E4168F0A8B2D0C1AE42F9B14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D72D7CEA973CF9D6028E7E66 /* libPods-poputka.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8437018920E10B9500910A1D /* poputka */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 843701B220E10B9500910A1D /* Build configuration list for PBXNativeTarget "poputka" */;
+			buildPhases = (
+				8FD2E0C7AEE13C687366FDA1 /* [CP] Check Pods Manifest.lock */,
+				8437018620E10B9500910A1D /* Sources */,
+				8437018720E10B9500910A1D /* Frameworks */,
+				8437018820E10B9500910A1D /* Resources */,
+				4E59DEFE3B526AE02FAE3BBF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = poputka;
+			productName = poputka;
+			productReference = 8437018A20E10B9500910A1D /* poputka.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8437019D20E10B9500910A1D /* poputkaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 843701B520E10B9500910A1D /* Build configuration list for PBXNativeTarget "poputkaTests" */;
+			buildPhases = (
+				8437019A20E10B9500910A1D /* Sources */,
+				8437019B20E10B9500910A1D /* Frameworks */,
+				8437019C20E10B9500910A1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				843701A020E10B9500910A1D /* PBXTargetDependency */,
+			);
+			name = poputkaTests;
+			productName = poputkaTests;
+			productReference = 8437019E20E10B9500910A1D /* poputkaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		843701A820E10B9500910A1D /* poputkaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 843701B820E10B9500910A1D /* Build configuration list for PBXNativeTarget "poputkaUITests" */;
+			buildPhases = (
+				843701A520E10B9500910A1D /* Sources */,
+				843701A620E10B9500910A1D /* Frameworks */,
+				843701A720E10B9500910A1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				843701AB20E10B9500910A1D /* PBXTargetDependency */,
+			);
+			name = poputkaUITests;
+			productName = poputkaUITests;
+			productReference = 843701A920E10B9500910A1D /* poputkaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8437018220E10B9500910A1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = ITLabAdmin;
+				TargetAttributes = {
+					8437018920E10B9500910A1D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					8437019D20E10B9500910A1D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8437018920E10B9500910A1D;
+					};
+					843701A820E10B9500910A1D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8437018920E10B9500910A1D;
+					};
+				};
+			};
+			buildConfigurationList = 8437018520E10B9500910A1D /* Build configuration list for PBXProject "poputka" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8437018120E10B9500910A1D;
+			productRefGroup = 8437018B20E10B9500910A1D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8437018920E10B9500910A1D /* poputka */,
+				8437019D20E10B9500910A1D /* poputkaTests */,
+				843701A820E10B9500910A1D /* poputkaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8437018820E10B9500910A1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8437019820E10B9500910A1D /* LaunchScreen.storyboard in Resources */,
+				8437019520E10B9500910A1D /* Assets.xcassets in Resources */,
+				843701BE20E10C8D00910A1D /* Podfile in Resources */,
+				8437019320E10B9500910A1D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8437019C20E10B9500910A1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		843701A720E10B9500910A1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E59DEFE3B526AE02FAE3BBF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-poputka/Pods-poputka-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-poputka/Pods-poputka-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FD2E0C7AEE13C687366FDA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-poputka-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8437018620E10B9500910A1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8437019020E10B9500910A1D /* ViewController.swift in Sources */,
+				8437018E20E10B9500910A1D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8437019A20E10B9500910A1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				843701A320E10B9500910A1D /* poputkaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		843701A520E10B9500910A1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				843701AE20E10B9500910A1D /* poputkaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		843701A020E10B9500910A1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8437018920E10B9500910A1D /* poputka */;
+			targetProxy = 8437019F20E10B9500910A1D /* PBXContainerItemProxy */;
+		};
+		843701AB20E10B9500910A1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8437018920E10B9500910A1D /* poputka */;
+			targetProxy = 843701AA20E10B9500910A1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8437019120E10B9500910A1D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8437019220E10B9500910A1D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8437019620E10B9500910A1D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8437019720E10B9500910A1D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		843701B020E10B9500910A1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		843701B120E10B9500910A1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		843701B320E10B9500910A1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5570D0E15473E474BBFB4A3 /* Pods-poputka.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = poputka/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aidai.poputka;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		843701B420E10B9500910A1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 676D12FC5E4079CC5C47878D /* Pods-poputka.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = poputka/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aidai.poputka;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		843701B620E10B9500910A1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = poputkaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aidai.poputkaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/poputka.app/poputka";
+			};
+			name = Debug;
+		};
+		843701B720E10B9500910A1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = poputkaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aidai.poputkaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/poputka.app/poputka";
+			};
+			name = Release;
+		};
+		843701B920E10B9500910A1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = poputkaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aidai.poputkaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = poputka;
+			};
+			name = Debug;
+		};
+		843701BA20E10B9500910A1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = poputkaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aidai.poputkaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = poputka;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8437018520E10B9500910A1D /* Build configuration list for PBXProject "poputka" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				843701B020E10B9500910A1D /* Debug */,
+				843701B120E10B9500910A1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		843701B220E10B9500910A1D /* Build configuration list for PBXNativeTarget "poputka" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				843701B320E10B9500910A1D /* Debug */,
+				843701B420E10B9500910A1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		843701B520E10B9500910A1D /* Build configuration list for PBXNativeTarget "poputkaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				843701B620E10B9500910A1D /* Debug */,
+				843701B720E10B9500910A1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		843701B820E10B9500910A1D /* Build configuration list for PBXNativeTarget "poputkaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				843701B920E10B9500910A1D /* Debug */,
+				843701BA20E10B9500910A1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8437018220E10B9500910A1D /* Project object */;
+}
