@@ -23,6 +23,18 @@ extension UIColor {
     }
 }
 
+extension UIButton {
+    
+    func underline() {
+        guard let text = self.titleLabel?.text else { return }
+        
+        let attributedString = NSMutableAttributedString(string: text)
+        attributedString.addAttribute(NSAttributedStringKey.underlineStyle, value: NSUnderlineStyle.styleSingle.rawValue, range: NSRange(location: 0, length: text.count))
+        
+        self.setAttributedTitle(attributedString, for: .normal)
+    }
+}
+
 extension UIViewController {
     
     func present(storyboard: String, viewController: String) {

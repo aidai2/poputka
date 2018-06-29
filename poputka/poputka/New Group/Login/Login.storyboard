@@ -70,7 +70,7 @@
                                 <state key="normal" title=" Вход"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="8IK-Vh-xmq">
-                                <rect key="frame" x="128" y="149.5" width="119" height="119"/>
+                                <rect key="frame" x="128" y="134.5" width="119" height="119"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="119" id="KNe-AS-aMX"/>
                                     <constraint firstAttribute="height" constant="119" id="r2F-OS-xip"/>
@@ -87,7 +87,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfC-CO-oHC">
-                                <rect key="frame" x="45" y="490.5" width="124" height="31"/>
+                                <rect key="frame" x="32" y="525.5" width="124" height="31"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                 <state key="normal" title="Забыли пароль?"/>
                             </button>
@@ -95,18 +95,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mda-QY-aqb" firstAttribute="centerX" secondItem="VEb-SV-h2Q" secondAttribute="centerX" id="127-qK-Ns1"/>
-                            <constraint firstItem="mfC-CO-oHC" firstAttribute="top" secondItem="IMp-xX-vcE" secondAttribute="bottom" constant="20" id="1Hr-kc-Bmc"/>
+                            <constraint firstItem="mfC-CO-oHC" firstAttribute="top" secondItem="IMp-xX-vcE" secondAttribute="bottom" constant="55" id="1Hr-kc-Bmc"/>
                             <constraint firstItem="IMp-xX-vcE" firstAttribute="centerX" secondItem="cLu-kb-xhA" secondAttribute="centerX" id="1Qp-AO-xa0"/>
                             <constraint firstItem="RYp-yM-bzD" firstAttribute="trailing" secondItem="VEb-SV-h2Q" secondAttribute="trailing" constant="32" id="6kC-cb-yd9"/>
                             <constraint firstItem="IMp-xX-vcE" firstAttribute="top" secondItem="VEb-SV-h2Q" secondAttribute="bottom" constant="8" id="Foy-8M-eVP"/>
-                            <constraint firstItem="mda-QY-aqb" firstAttribute="top" secondItem="8IK-Vh-xmq" secondAttribute="bottom" constant="40" id="GFS-CO-CsZ"/>
+                            <constraint firstItem="mda-QY-aqb" firstAttribute="top" secondItem="8IK-Vh-xmq" secondAttribute="bottom" constant="55" id="GFS-CO-CsZ"/>
                             <constraint firstItem="FYU-wY-Cze" firstAttribute="trailing" secondItem="mda-QY-aqb" secondAttribute="trailing" id="PfS-e7-ibf"/>
                             <constraint firstItem="8IK-Vh-xmq" firstAttribute="centerX" secondItem="cLu-kb-xhA" secondAttribute="centerX" id="RTa-Uv-qPY"/>
                             <constraint firstItem="RYp-yM-bzD" firstAttribute="bottom" secondItem="FYU-wY-Cze" secondAttribute="bottom" constant="20" id="UIn-tD-ZT5"/>
                             <constraint firstItem="VEb-SV-h2Q" firstAttribute="top" secondItem="mda-QY-aqb" secondAttribute="bottom" constant="9" id="WnL-0k-YGx"/>
                             <constraint firstItem="FYU-wY-Cze" firstAttribute="leading" secondItem="mda-QY-aqb" secondAttribute="leading" id="X4O-U8-5X0"/>
-                            <constraint firstItem="mfC-CO-oHC" firstAttribute="leading" secondItem="RYp-yM-bzD" secondAttribute="leading" constant="45" id="Xre-hF-HH9"/>
                             <constraint firstItem="mda-QY-aqb" firstAttribute="width" secondItem="VEb-SV-h2Q" secondAttribute="width" id="f0y-5I-tHZ"/>
+                            <constraint firstItem="mfC-CO-oHC" firstAttribute="leading" secondItem="VEb-SV-h2Q" secondAttribute="leading" id="kGe-24-uWa"/>
                             <constraint firstItem="mda-QY-aqb" firstAttribute="centerY" secondItem="cLu-kb-xhA" secondAttribute="centerY" id="kvs-WG-gKG"/>
                             <constraint firstItem="mda-QY-aqb" firstAttribute="height" secondItem="VEb-SV-h2Q" secondAttribute="height" id="uNC-2r-NaT"/>
                             <constraint firstItem="VEb-SV-h2Q" firstAttribute="leading" secondItem="RYp-yM-bzD" secondAttribute="leading" constant="32" id="yJX-h7-Ams"/>

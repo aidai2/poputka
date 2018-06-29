@@ -10,12 +10,14 @@ import UIKit
 
 class RegistrationViewController: UIViewController {
 
+    @IBOutlet weak var confidentialButton: UIButton!
     @IBOutlet weak var segmentedControl: HBSegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupSegmentedControl()
+        confidentialButton.underline()
     }
     
     private func setupSegmentedControl() {

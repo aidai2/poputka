@@ -72,20 +72,20 @@
                                 <state key="normal" title="Зарегистрироваться"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFM-Ha-8X8" customClass="HBSegmentedControl" customModule="poputka" customModuleProvider="target">
-                                <rect key="frame" x="45" y="247.5" width="285" height="45"/>
+                                <rect key="frame" x="32" y="231.5" width="311" height="45"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="irg-Uj-nfY"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EE9-iG-XzY">
-                                <rect key="frame" x="115" y="203" width="145" height="28.5"/>
+                                <rect key="frame" x="115.5" y="171.5" width="145" height="28"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                 <color key="textColor" red="0.32156862745098036" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Gzm-Tc-cDF">
-                                <rect key="frame" x="155" y="122" width="65" height="65"/>
+                                <rect key="frame" x="155" y="66.5" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="Zes-ux-DYg"/>
                                     <constraint firstAttribute="height" constant="65" id="kyu-eZ-lam"/>
@@ -120,23 +120,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QFM-Ha-8X8" firstAttribute="leading" secondItem="QCY-SE-wae" secondAttribute="leading" constant="45" id="7Zl-RD-37n"/>
                             <constraint firstItem="Gzm-Tc-cDF" firstAttribute="centerX" secondItem="ACW-Ls-FLG" secondAttribute="centerX" id="AGs-2F-8If"/>
                             <constraint firstItem="eGF-R2-ld7" firstAttribute="centerY" secondItem="ACW-Ls-FLG" secondAttribute="centerY" id="BJs-bC-pgv"/>
-                            <constraint firstItem="QFM-Ha-8X8" firstAttribute="top" secondItem="EE9-iG-XzY" secondAttribute="bottom" constant="16" id="GB8-3k-Hqb"/>
+                            <constraint firstItem="QFM-Ha-8X8" firstAttribute="top" secondItem="EE9-iG-XzY" secondAttribute="bottom" constant="32" id="GB8-3k-Hqb"/>
                             <constraint firstItem="QCY-SE-wae" firstAttribute="trailing" secondItem="eGF-R2-ld7" secondAttribute="trailing" constant="32" id="GV8-yy-Pn9"/>
-                            <constraint firstItem="eGF-R2-ld7" firstAttribute="top" secondItem="QFM-Ha-8X8" secondAttribute="bottom" constant="16" id="Ho9-bQ-0LT"/>
+                            <constraint firstItem="eGF-R2-ld7" firstAttribute="leading" secondItem="QFM-Ha-8X8" secondAttribute="leading" id="GXt-F6-Wmg"/>
+                            <constraint firstItem="eGF-R2-ld7" firstAttribute="top" secondItem="QFM-Ha-8X8" secondAttribute="bottom" constant="32" id="Ho9-bQ-0LT"/>
                             <constraint firstItem="ItJ-yI-TEc" firstAttribute="height" secondItem="eGF-R2-ld7" secondAttribute="height" id="IqI-e4-ahA"/>
                             <constraint firstItem="hP3-Mr-MRD" firstAttribute="top" secondItem="W6E-jh-pLK" secondAttribute="bottom" constant="8" id="Jli-6a-lDj"/>
                             <constraint firstItem="W6E-jh-pLK" firstAttribute="height" secondItem="ItJ-yI-TEc" secondAttribute="height" id="Ka0-kv-KP4"/>
                             <constraint firstItem="cxb-US-duY" firstAttribute="leading" secondItem="GR2-OH-UVK" secondAttribute="leading" id="Lzz-Db-894"/>
                             <constraint firstItem="ItJ-yI-TEc" firstAttribute="top" secondItem="eGF-R2-ld7" secondAttribute="bottom" constant="8" id="Mft-KT-1Ua"/>
-                            <constraint firstItem="EE9-iG-XzY" firstAttribute="top" secondItem="Gzm-Tc-cDF" secondAttribute="bottom" constant="16" id="NOL-vg-AuQ"/>
+                            <constraint firstItem="EE9-iG-XzY" firstAttribute="top" secondItem="Gzm-Tc-cDF" secondAttribute="bottom" constant="40" id="NOL-vg-AuQ"/>
                             <constraint firstItem="QCY-SE-wae" firstAttribute="trailing" secondItem="DQu-3W-8gY" secondAttribute="trailing" constant="45" id="PwK-It-4Rh"/>
                             <constraint firstItem="W6E-jh-pLK" firstAttribute="trailing" secondItem="ItJ-yI-TEc" secondAttribute="trailing" id="QYk-un-ChO"/>
                             <constraint firstItem="DQu-3W-8gY" firstAttribute="leading" secondItem="QCY-SE-wae" secondAttribute="leading" constant="45" id="RXZ-gZ-NhZ"/>
                             <constraint firstItem="REn-ST-CzM" firstAttribute="trailing" secondItem="GR2-OH-UVK" secondAttribute="trailing" id="ZZd-9m-BE6"/>
-                            <constraint firstItem="QCY-SE-wae" firstAttribute="trailing" secondItem="QFM-Ha-8X8" secondAttribute="trailing" constant="45" id="cm8-AO-0i2"/>
                             <constraint firstItem="REn-ST-CzM" firstAttribute="leading" secondItem="GR2-OH-UVK" secondAttribute="leading" id="i1X-Gx-nYk"/>
                             <constraint firstItem="ItJ-yI-TEc" firstAttribute="trailing" secondItem="eGF-R2-ld7" secondAttribute="trailing" id="ire-dc-6mn"/>
                             <constraint firstItem="W6E-jh-pLK" firstAttribute="leading" secondItem="ItJ-yI-TEc" secondAttribute="leading" id="nEM-1Z-Utk"/>
@@ -146,10 +145,12 @@
                             <constraint firstItem="eGF-R2-ld7" firstAttribute="leading" secondItem="QCY-SE-wae" secondAttribute="leading" constant="32" id="u3z-Xc-egB"/>
                             <constraint firstItem="ItJ-yI-TEc" firstAttribute="leading" secondItem="eGF-R2-ld7" secondAttribute="leading" id="uXV-2f-fd3"/>
                             <constraint firstItem="hP3-Mr-MRD" firstAttribute="centerX" secondItem="ACW-Ls-FLG" secondAttribute="centerX" id="uaK-2X-YmT"/>
+                            <constraint firstItem="eGF-R2-ld7" firstAttribute="trailing" secondItem="QFM-Ha-8X8" secondAttribute="trailing" id="zFE-Vi-hMk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QCY-SE-wae"/>
                     </view>
                     <connections>
+                        <outlet property="confidentialButton" destination="hP3-Mr-MRD" id="xkQ-cX-ssY"/>
                         <outlet property="segmentedControl" destination="QFM-Ha-8X8" id="yNj-Xi-rXQ"/>
                     </connections>
                 </viewController>
