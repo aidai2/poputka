@@ -7,14 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84135B0A20E62ADB001F6531 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84135B0920E62ADB001F6531 /* Login.storyboard */; };
+		84135B0D20E62AFF001F6531 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84135B0C20E62AFF001F6531 /* Registration.storyboard */; };
+		84135B1020E62B2A001F6531 /* Recovery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84135B0F20E62B2A001F6531 /* Recovery.storyboard */; };
+		84135B1520E62EEC001F6531 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135B1420E62EEC001F6531 /* MainViewController.swift */; };
+		84135B1720E62F33001F6531 /* RecoveryPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135B1620E62F33001F6531 /* RecoveryPhoneViewController.swift */; };
+		84135B1920E62F52001F6531 /* RevoveryPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135B1820E62F52001F6531 /* RevoveryPasswordViewController.swift */; };
+		84135B1B20E62F64001F6531 /* RecoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135B1A20E62F64001F6531 /* RecoveryViewController.swift */; };
+		84135B1D20E62F7B001F6531 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135B1C20E62F7B001F6531 /* RegistrationViewController.swift */; };
+		84135B1F20E62F8F001F6531 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135B1E20E62F8F001F6531 /* LoginViewController.swift */; };
+		84135B2120E63104001F6531 /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135B2020E63104001F6531 /* BlueView.swift */; };
+		84135B2420E6323E001F6531 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135B2320E6323E001F6531 /* Extentions.swift */; };
+		84135B2620E63303001F6531 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135B2520E63303001F6531 /* Constants.swift */; };
+		84135B2820E634E0001F6531 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135B2720E634E0001F6531 /* BlueButton.swift */; };
+		84135B2A20E63974001F6531 /* RegistrationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135B2920E63974001F6531 /* RegistrationButton.swift */; };
+		84135B2C20E646DD001F6531 /* HBSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135B2B20E646DD001F6531 /* HBSegmentedControl.swift */; };
+		84135B3520E64EEA001F6531 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84135B3420E64C84001F6531 /* Roboto-Light.ttf */; };
+		84135B3620E64EEC001F6531 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84135B3320E64C73001F6531 /* Roboto-Regular.ttf */; };
+		84135B3720E64EEE001F6531 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84135B3220E64C66001F6531 /* Roboto-Bold.ttf */; };
+		84135B3820E64EF0001F6531 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84135B3120E64C66001F6531 /* Roboto-Medium.ttf */; };
+		84135B3920E64EF3001F6531 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84135B3020E64C65001F6531 /* Roboto-MediumItalic.ttf */; };
 		8437018E20E10B9500910A1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437018D20E10B9500910A1D /* AppDelegate.swift */; };
-		8437019020E10B9500910A1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437018F20E10B9500910A1D /* ViewController.swift */; };
 		8437019320E10B9500910A1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8437019120E10B9500910A1D /* Main.storyboard */; };
 		8437019520E10B9500910A1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8437019420E10B9500910A1D /* Assets.xcassets */; };
 		8437019820E10B9500910A1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8437019620E10B9500910A1D /* LaunchScreen.storyboard */; };
 		843701A320E10B9500910A1D /* poputkaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843701A220E10B9500910A1D /* poputkaTests.swift */; };
 		843701AE20E10B9500910A1D /* poputkaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843701AD20E10B9500910A1D /* poputkaUITests.swift */; };
-		843701BE20E10C8D00910A1D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 843701BD20E10C8D00910A1D /* Podfile */; };
 		CDF0B0EDA5D46C667F22D813 /* libPods-poputka.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D72D7CEA973CF9D6028E7E66 /* libPods-poputka.a */; };
 /* End PBXBuildFile section */
 
@@ -37,9 +55,28 @@
 
 /* Begin PBXFileReference section */
 		676D12FC5E4079CC5C47878D /* Pods-poputka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poputka.release.xcconfig"; path = "Pods/Target Support Files/Pods-poputka/Pods-poputka.release.xcconfig"; sourceTree = "<group>"; };
+		84135B0920E62ADB001F6531 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		84135B0C20E62AFF001F6531 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		84135B0F20E62B2A001F6531 /* Recovery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recovery.storyboard; sourceTree = "<group>"; };
+		84135B1420E62EEC001F6531 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		84135B1620E62F33001F6531 /* RecoveryPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPhoneViewController.swift; sourceTree = "<group>"; };
+		84135B1820E62F52001F6531 /* RevoveryPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevoveryPasswordViewController.swift; sourceTree = "<group>"; };
+		84135B1A20E62F64001F6531 /* RecoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryViewController.swift; sourceTree = "<group>"; };
+		84135B1C20E62F7B001F6531 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		84135B1E20E62F8F001F6531 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		84135B2020E63104001F6531 /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
+		84135B2320E6323E001F6531 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		84135B2520E63303001F6531 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		84135B2720E634E0001F6531 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
+		84135B2920E63974001F6531 /* RegistrationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationButton.swift; sourceTree = "<group>"; };
+		84135B2B20E646DD001F6531 /* HBSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HBSegmentedControl.swift; sourceTree = "<group>"; };
+		84135B3020E64C65001F6531 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		84135B3120E64C66001F6531 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		84135B3220E64C66001F6531 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		84135B3320E64C73001F6531 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		84135B3420E64C84001F6531 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		8437018A20E10B9500910A1D /* poputka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poputka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8437018D20E10B9500910A1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8437018F20E10B9500910A1D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8437019220E10B9500910A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8437019420E10B9500910A1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8437019720E10B9500910A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,7 +87,6 @@
 		843701A920E10B9500910A1D /* poputkaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = poputkaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		843701AD20E10B9500910A1D /* poputkaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poputkaUITests.swift; sourceTree = "<group>"; };
 		843701AF20E10B9500910A1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		843701BD20E10C8D00910A1D /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5570D0E15473E474BBFB4A3 /* Pods-poputka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poputka.debug.xcconfig"; path = "Pods/Target Support Files/Pods-poputka/Pods-poputka.debug.xcconfig"; sourceTree = "<group>"; };
 		D72D7CEA973CF9D6028E7E66 /* libPods-poputka.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-poputka.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,10 +126,101 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		84135B0620E62A86001F6531 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				84135B0920E62ADB001F6531 /* Login.storyboard */,
+				84135B1E20E62F8F001F6531 /* LoginViewController.swift */,
+			);
+			name = Login;
+			path = "../New Group/Login";
+			sourceTree = "<group>";
+		};
+		84135B0B20E62AE2001F6531 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				84135B0C20E62AFF001F6531 /* Registration.storyboard */,
+				84135B1C20E62F7B001F6531 /* RegistrationViewController.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		84135B0E20E62B04001F6531 /* Recovery */ = {
+			isa = PBXGroup;
+			children = (
+				84135B0F20E62B2A001F6531 /* Recovery.storyboard */,
+				84135B1620E62F33001F6531 /* RecoveryPhoneViewController.swift */,
+				84135B1820E62F52001F6531 /* RevoveryPasswordViewController.swift */,
+				84135B1A20E62F64001F6531 /* RecoveryViewController.swift */,
+			);
+			path = Recovery;
+			sourceTree = "<group>";
+		};
+		84135B1120E62B47001F6531 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				84135B2F20E64C03001F6531 /* Font */,
+				84135B2E20E649F0001F6531 /* Extensions */,
+				84135B2D20E649E7001F6531 /* CustomUI */,
+				84135B2B20E646DD001F6531 /* HBSegmentedControl.swift */,
+				84135B2520E63303001F6531 /* Constants.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		84135B1220E62DC8001F6531 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84135B1320E62EA5001F6531 /* Main */,
+				84135B0E20E62B04001F6531 /* Recovery */,
+				84135B0B20E62AE2001F6531 /* Registration */,
+				84135B0620E62A86001F6531 /* Login */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		84135B1320E62EA5001F6531 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8437019120E10B9500910A1D /* Main.storyboard */,
+				84135B1420E62EEC001F6531 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		84135B2D20E649E7001F6531 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				84135B2020E63104001F6531 /* BlueView.swift */,
+				84135B2720E634E0001F6531 /* BlueButton.swift */,
+				84135B2920E63974001F6531 /* RegistrationButton.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		84135B2E20E649F0001F6531 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84135B2320E6323E001F6531 /* Extentions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84135B2F20E64C03001F6531 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				84135B3420E64C84001F6531 /* Roboto-Light.ttf */,
+				84135B3320E64C73001F6531 /* Roboto-Regular.ttf */,
+				84135B3220E64C66001F6531 /* Roboto-Bold.ttf */,
+				84135B3120E64C66001F6531 /* Roboto-Medium.ttf */,
+				84135B3020E64C65001F6531 /* Roboto-MediumItalic.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		8437018120E10B9500910A1D = {
 			isa = PBXGroup;
 			children = (
-				843701BD20E10C8D00910A1D /* Podfile */,
 				8437018C20E10B9500910A1D /* poputka */,
 				843701A120E10B9500910A1D /* poputkaTests */,
 				843701AC20E10B9500910A1D /* poputkaUITests */,
@@ -116,9 +243,9 @@
 		8437018C20E10B9500910A1D /* poputka */ = {
 			isa = PBXGroup;
 			children = (
+				84135B1120E62B47001F6531 /* SupportingFiles */,
+				84135B1220E62DC8001F6531 /* Controllers */,
 				8437018D20E10B9500910A1D /* AppDelegate.swift */,
-				8437018F20E10B9500910A1D /* ViewController.swift */,
-				8437019120E10B9500910A1D /* Main.storyboard */,
 				8437019420E10B9500910A1D /* Assets.xcassets */,
 				8437019620E10B9500910A1D /* LaunchScreen.storyboard */,
 				8437019920E10B9500910A1D /* Info.plist */,
@@ -261,10 +388,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84135B3820E64EF0001F6531 /* Roboto-Medium.ttf in Resources */,
+				84135B0D20E62AFF001F6531 /* Registration.storyboard in Resources */,
+				84135B0A20E62ADB001F6531 /* Login.storyboard in Resources */,
+				84135B3620E64EEC001F6531 /* Roboto-Regular.ttf in Resources */,
 				8437019820E10B9500910A1D /* LaunchScreen.storyboard in Resources */,
 				8437019520E10B9500910A1D /* Assets.xcassets in Resources */,
-				843701BE20E10C8D00910A1D /* Podfile in Resources */,
+				84135B3720E64EEE001F6531 /* Roboto-Bold.ttf in Resources */,
+				84135B3520E64EEA001F6531 /* Roboto-Light.ttf in Resources */,
 				8437019320E10B9500910A1D /* Main.storyboard in Resources */,
+				84135B3920E64EF3001F6531 /* Roboto-MediumItalic.ttf in Resources */,
+				84135B1020E62B2A001F6531 /* Recovery.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,8 +464,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8437019020E10B9500910A1D /* ViewController.swift in Sources */,
+				84135B1F20E62F8F001F6531 /* LoginViewController.swift in Sources */,
+				84135B1D20E62F7B001F6531 /* RegistrationViewController.swift in Sources */,
+				84135B1B20E62F64001F6531 /* RecoveryViewController.swift in Sources */,
 				8437018E20E10B9500910A1D /* AppDelegate.swift in Sources */,
+				84135B2120E63104001F6531 /* BlueView.swift in Sources */,
+				84135B2620E63303001F6531 /* Constants.swift in Sources */,
+				84135B1720E62F33001F6531 /* RecoveryPhoneViewController.swift in Sources */,
+				84135B1520E62EEC001F6531 /* MainViewController.swift in Sources */,
+				84135B2820E634E0001F6531 /* BlueButton.swift in Sources */,
+				84135B1920E62F52001F6531 /* RevoveryPasswordViewController.swift in Sources */,
+				84135B2A20E63974001F6531 /* RegistrationButton.swift in Sources */,
+				84135B2420E6323E001F6531 /* Extentions.swift in Sources */,
+				84135B2C20E646DD001F6531 /* HBSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +644,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4459UQ4UL2;
 				INFOPLIST_FILE = poputka/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aidai.poputka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -514,7 +661,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4459UQ4UL2;
 				INFOPLIST_FILE = poputka/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aidai.poputka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
