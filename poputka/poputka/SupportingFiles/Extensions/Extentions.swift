@@ -42,6 +42,25 @@ extension UIViewController {
         let vc = sb.instantiateViewController(withIdentifier: viewController)
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func viewControllerWith(storyboard: String, identifier: String) -> UIViewController {
+        let sb = UIStoryboard(name: storyboard, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: identifier)
+        return vc
+    }
+    
+    func setupMenuBarButton() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "sideBar"),
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(showMenu))
+    }
+    
+    @objc private func showMenu() {
+        if let container = self.so_containerViewController {
+            container.isSideViewControllerPresented = false
+        }
+    }
+
+
 }
-
-

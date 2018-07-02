@@ -1,7 +1,299 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <customFonts key="customFonts">
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Recovery Phone View Controller-->
+        <scene sceneID="xXh-AI-5nt">
+            <objects>
+                <viewController storyboardIdentifier="RecoveryPhoneViewController" id="U8g-mI-fep" customClass="RecoveryPhoneViewController" customModule="poputka" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rE4-bi-Kok">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLw-bf-L9F" customClass="BlueView" customModule="poputka" customModuleProvider="target">
+                                <rect key="frame" x="32" y="362" width="311" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+996" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R9D-9r-epe">
+                                        <rect key="frame" x="24" y="16.5" width="263" height="17"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="R9D-9r-epe" firstAttribute="leading" secondItem="ZLw-bf-L9F" secondAttribute="leadingMargin" constant="16" id="HgB-ex-jdC"/>
+                                    <constraint firstAttribute="height" constant="50" id="QXa-4M-FsE"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="R9D-9r-epe" secondAttribute="trailing" constant="16" id="aR6-Ud-bZb"/>
+                                    <constraint firstItem="R9D-9r-epe" firstAttribute="centerY" secondItem="ZLw-bf-L9F" secondAttribute="centerY" id="fCA-RR-HAM"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите ваш номер телефона" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ass-sb-pJM">
+                                <rect key="frame" x="32" y="325.5" width="311" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                <color key="textColor" red="0.39603209495544434" green="0.39610502123832703" blue="0.39602747559547424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Восстановление пароля" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6n-sr-c6Y" customClass="PageTitleLabel" customModule="poputka" customModuleProvider="target">
+                                <rect key="frame" x="84" y="255" width="207" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="wys-8X-4Yt">
+                                <rect key="frame" x="154.5" y="150" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="tDe-zH-eQg"/>
+                                    <constraint firstAttribute="width" constant="65" id="ufw-JY-muO"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OA8-cS-7lH" customClass="BlueButton" customModule="poputka" customModuleProvider="target">
+                                <rect key="frame" x="32" y="469" width="311" height="45"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="BuO-KA-6pM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                <state key="normal" title="Отправить код">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendCode:" destination="U8g-mI-fep" eventType="touchUpInside" id="DK8-Wh-lBd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZLw-bf-L9F" firstAttribute="top" secondItem="ass-sb-pJM" secondAttribute="bottom" constant="20" id="67T-S8-R4m"/>
+                            <constraint firstItem="ass-sb-pJM" firstAttribute="width" secondItem="ZLw-bf-L9F" secondAttribute="width" id="72u-ho-ukO"/>
+                            <constraint firstItem="ztk-E2-RiS" firstAttribute="trailing" secondItem="ZLw-bf-L9F" secondAttribute="trailing" constant="32" id="7Vq-2T-kZG"/>
+                            <constraint firstItem="OA8-cS-7lH" firstAttribute="top" secondItem="ZLw-bf-L9F" secondAttribute="bottom" constant="57" id="9uT-gN-jGK"/>
+                            <constraint firstItem="ZLw-bf-L9F" firstAttribute="leading" secondItem="ztk-E2-RiS" secondAttribute="leading" constant="32" id="EXK-Ho-CRv"/>
+                            <constraint firstItem="ass-sb-pJM" firstAttribute="top" secondItem="j6n-sr-c6Y" secondAttribute="bottom" constant="50" id="KnP-4h-e1m"/>
+                            <constraint firstItem="OA8-cS-7lH" firstAttribute="width" secondItem="ZLw-bf-L9F" secondAttribute="width" id="NHv-Wm-K2G"/>
+                            <constraint firstItem="wys-8X-4Yt" firstAttribute="centerX" secondItem="rE4-bi-Kok" secondAttribute="centerX" id="aBc-Vp-DXr"/>
+                            <constraint firstItem="j6n-sr-c6Y" firstAttribute="top" secondItem="wys-8X-4Yt" secondAttribute="bottom" constant="40" id="auA-N9-EPf"/>
+                            <constraint firstItem="j6n-sr-c6Y" firstAttribute="leading" secondItem="ztk-E2-RiS" secondAttribute="leading" constant="84" id="dlC-oB-vbw"/>
+                            <constraint firstItem="ass-sb-pJM" firstAttribute="centerX" secondItem="rE4-bi-Kok" secondAttribute="centerX" id="jJf-sz-VEA"/>
+                            <constraint firstItem="ass-sb-pJM" firstAttribute="centerY" secondItem="rE4-bi-Kok" secondAttribute="centerY" id="n5y-h5-HoJ"/>
+                            <constraint firstItem="ztk-E2-RiS" firstAttribute="trailing" secondItem="j6n-sr-c6Y" secondAttribute="trailing" constant="84" id="oOm-ZK-EoZ"/>
+                            <constraint firstItem="OA8-cS-7lH" firstAttribute="centerX" secondItem="rE4-bi-Kok" secondAttribute="centerX" id="ovO-Kn-MGa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ztk-E2-RiS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j8N-jJ-RFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16.800000000000001" y="300"/>
+        </scene>
+        <!--Revovery Password View Controller-->
+        <scene sceneID="mjB-ie-UNk">
+            <objects>
+                <viewController storyboardIdentifier="RevoveryPasswordViewController" id="xlS-S9-TCW" customClass="RevoveryPasswordViewController" customModule="poputka" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XWD-He-u52">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите код" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60e-fF-PRw">
+                                <rect key="frame" x="32" y="325.5" width="311" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                <color key="textColor" red="0.32156862745098036" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhF-LS-aID" customClass="BlueView" customModule="poputka" customModuleProvider="target">
+                                <rect key="frame" x="32" y="362" width="311" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*******" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="atI-Np-mFI">
+                                        <rect key="frame" x="16" y="16.5" width="279" height="17"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="atI-Np-mFI" firstAttribute="leading" secondItem="JhF-LS-aID" secondAttribute="leading" constant="16" id="Gp5-Ef-mYF"/>
+                                    <constraint firstAttribute="height" constant="50" id="aEq-hN-5aH"/>
+                                    <constraint firstAttribute="trailing" secondItem="atI-Np-mFI" secondAttribute="trailing" constant="16" id="ceS-SJ-DeT"/>
+                                    <constraint firstItem="atI-Np-mFI" firstAttribute="centerY" secondItem="JhF-LS-aID" secondAttribute="centerY" id="vDS-as-ucP"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Восстановление пароля" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ch-Z4-ggj" customClass="PageTitleLabel" customModule="poputka" customModuleProvider="target">
+                                <rect key="frame" x="84" y="255" width="207" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="rfJ-8k-KVD">
+                                <rect key="frame" x="154.5" y="150" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="bix-4V-0GY"/>
+                                    <constraint firstAttribute="width" constant="65" id="fnI-kT-oGh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kue-v7-XX5" customClass="BlueButton" customModule="poputka" customModuleProvider="target">
+                                <rect key="frame" x="32" y="469" width="311" height="45"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="syb-HU-v9t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ConfirmPasswordButton:" destination="L56-Cm-Mdk" eventType="touchUpInside" id="Ot9-U3-NQ4"/>
+                                    <action selector="OkButton:" destination="xlS-S9-TCW" eventType="touchUpInside" id="ztW-6D-cOX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="60e-fF-PRw" firstAttribute="top" secondItem="6Ch-Z4-ggj" secondAttribute="bottom" constant="50" id="5d8-Mp-rBa"/>
+                            <constraint firstItem="rfJ-8k-KVD" firstAttribute="centerX" secondItem="XWD-He-u52" secondAttribute="centerX" id="8dv-3o-0KA"/>
+                            <constraint firstItem="8hH-Qb-BM1" firstAttribute="trailing" secondItem="6Ch-Z4-ggj" secondAttribute="trailing" constant="84" id="Bwj-tP-KzN"/>
+                            <constraint firstItem="kue-v7-XX5" firstAttribute="width" secondItem="JhF-LS-aID" secondAttribute="width" id="JMJ-nI-rPD"/>
+                            <constraint firstItem="JhF-LS-aID" firstAttribute="centerX" secondItem="XWD-He-u52" secondAttribute="centerX" id="Kb2-kl-4Qs"/>
+                            <constraint firstItem="8hH-Qb-BM1" firstAttribute="trailing" secondItem="60e-fF-PRw" secondAttribute="trailing" constant="32" id="MqD-oy-3B7"/>
+                            <constraint firstItem="6Ch-Z4-ggj" firstAttribute="top" secondItem="rfJ-8k-KVD" secondAttribute="bottom" constant="40" id="Ohm-iZ-R1A"/>
+                            <constraint firstItem="JhF-LS-aID" firstAttribute="width" secondItem="60e-fF-PRw" secondAttribute="width" id="Y54-KP-8PT"/>
+                            <constraint firstItem="60e-fF-PRw" firstAttribute="centerY" secondItem="XWD-He-u52" secondAttribute="centerY" id="cL3-dF-Kka"/>
+                            <constraint firstItem="60e-fF-PRw" firstAttribute="leading" secondItem="8hH-Qb-BM1" secondAttribute="leading" constant="32" id="g0v-8w-xeI"/>
+                            <constraint firstItem="kue-v7-XX5" firstAttribute="top" secondItem="JhF-LS-aID" secondAttribute="bottom" constant="57" id="gQY-tD-oAa"/>
+                            <constraint firstItem="60e-fF-PRw" firstAttribute="centerX" secondItem="XWD-He-u52" secondAttribute="centerX" id="hXg-mX-UyT"/>
+                            <constraint firstItem="6Ch-Z4-ggj" firstAttribute="leading" secondItem="8hH-Qb-BM1" secondAttribute="leading" constant="84" id="nFS-H7-Qhg"/>
+                            <constraint firstItem="JhF-LS-aID" firstAttribute="top" secondItem="60e-fF-PRw" secondAttribute="bottom" constant="20" id="pjt-Vf-4R0"/>
+                            <constraint firstItem="kue-v7-XX5" firstAttribute="centerX" secondItem="XWD-He-u52" secondAttribute="centerX" id="qqd-VY-Q4i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8hH-Qb-BM1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i7j-6j-CaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="L56-Cm-Mdk" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="728" y="297"/>
+        </scene>
+        <!--Recovery View Controller-->
+        <scene sceneID="amA-1N-VKh">
+            <objects>
+                <viewController storyboardIdentifier="RecoveryViewController" id="4oX-IK-BPz" customClass="RecoveryViewController" customModule="poputka" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r4r-JO-BdK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LM6-kU-cFk" customClass="BlueView" customModule="poputka" customModuleProvider="target">
+                                <rect key="frame" x="32" y="308.5" width="311" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Новый пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="piJ-JH-hl9">
+                                        <rect key="frame" x="16" y="16.5" width="279" height="17"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="piJ-JH-hl9" firstAttribute="centerY" secondItem="LM6-kU-cFk" secondAttribute="centerY" id="215-cd-0tD"/>
+                                    <constraint firstAttribute="trailing" secondItem="piJ-JH-hl9" secondAttribute="trailing" constant="16" id="Es5-fd-op1"/>
+                                    <constraint firstAttribute="height" constant="50" id="FNJ-hk-cL7"/>
+                                    <constraint firstItem="piJ-JH-hl9" firstAttribute="leading" secondItem="LM6-kU-cFk" secondAttribute="leading" constant="16" id="IrU-dv-mRD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZhD-NH-Ria" customClass="BlueView" customModule="poputka" customModuleProvider="target">
+                                <rect key="frame" x="31.5" y="367.5" width="311" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Повторить новый пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwj-FR-RmW">
+                                        <rect key="frame" x="16" y="10" width="279" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="gwj-FR-RmW" firstAttribute="leading" secondItem="ZhD-NH-Ria" secondAttribute="leading" constant="16" id="4XG-Fq-ZO4"/>
+                                    <constraint firstItem="gwj-FR-RmW" firstAttribute="centerY" secondItem="ZhD-NH-Ria" secondAttribute="centerY" id="bcY-k7-cdv"/>
+                                    <constraint firstAttribute="trailing" secondItem="gwj-FR-RmW" secondAttribute="trailing" constant="16" id="i45-wn-Z8B"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Восстановление пароля" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15r-hm-PMh" customClass="PageTitleLabel" customModule="poputka" customModuleProvider="target">
+                                <rect key="frame" x="84" y="237.5" width="207" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="3tA-5x-tPR">
+                                <rect key="frame" x="154.5" y="132.5" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="A0i-QL-JPy"/>
+                                    <constraint firstAttribute="height" constant="65" id="fx7-r4-ebX"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fic-hZ-bvE" customClass="BlueButton" customModule="poputka" customModuleProvider="target">
+                                <rect key="frame" x="32" y="564" width="311" height="45"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="aYC-HB-bFO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                <state key="normal" title="Подтвердить">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ConfirmPasswordButton:" destination="4oX-IK-BPz" eventType="touchUpInside" id="Ldn-Dy-L4D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZhD-NH-Ria" firstAttribute="height" secondItem="LM6-kU-cFk" secondAttribute="height" id="2Al-nQ-IbF"/>
+                            <constraint firstItem="LM6-kU-cFk" firstAttribute="centerX" secondItem="r4r-JO-BdK" secondAttribute="centerX" id="3AW-c2-RW3"/>
+                            <constraint firstItem="LM6-kU-cFk" firstAttribute="leading" secondItem="ssS-Up-qeU" secondAttribute="leading" constant="32" id="3Ph-FA-dRm"/>
+                            <constraint firstItem="fic-hZ-bvE" firstAttribute="centerX" secondItem="r4r-JO-BdK" secondAttribute="centerX" id="3R0-iL-bGZ"/>
+                            <constraint firstItem="ssS-Up-qeU" firstAttribute="bottom" secondItem="fic-hZ-bvE" secondAttribute="bottom" constant="58" id="8Ku-qR-f7h"/>
+                            <constraint firstItem="fic-hZ-bvE" firstAttribute="width" secondItem="ZhD-NH-Ria" secondAttribute="width" id="FQ5-6X-5C7"/>
+                            <constraint firstItem="3tA-5x-tPR" firstAttribute="centerX" secondItem="r4r-JO-BdK" secondAttribute="centerX" id="TIM-sL-50I"/>
+                            <constraint firstItem="ssS-Up-qeU" firstAttribute="trailing" secondItem="LM6-kU-cFk" secondAttribute="trailing" constant="32" id="UFo-Vz-4PU"/>
+                            <constraint firstItem="ssS-Up-qeU" firstAttribute="trailing" secondItem="15r-hm-PMh" secondAttribute="trailing" constant="84" id="VOK-ub-Ubk"/>
+                            <constraint firstItem="ZhD-NH-Ria" firstAttribute="centerX" secondItem="r4r-JO-BdK" secondAttribute="centerX" id="bQA-G6-AG3"/>
+                            <constraint firstItem="LM6-kU-cFk" firstAttribute="top" secondItem="15r-hm-PMh" secondAttribute="bottom" constant="50" id="eBa-6Q-YDK"/>
+                            <constraint firstItem="LM6-kU-cFk" firstAttribute="centerY" secondItem="r4r-JO-BdK" secondAttribute="centerY" id="eIx-Us-mrn"/>
+                            <constraint firstItem="ZhD-NH-Ria" firstAttribute="top" secondItem="LM6-kU-cFk" secondAttribute="bottom" constant="9" id="qwi-Kd-Rzf"/>
+                            <constraint firstItem="ZhD-NH-Ria" firstAttribute="width" secondItem="LM6-kU-cFk" secondAttribute="width" id="veH-bF-CGW"/>
+                            <constraint firstItem="15r-hm-PMh" firstAttribute="top" secondItem="3tA-5x-tPR" secondAttribute="bottom" constant="40" id="xwA-41-O19"/>
+                            <constraint firstItem="gwj-FR-RmW" firstAttribute="top" secondItem="LM6-kU-cFk" secondAttribute="bottom" constant="19" id="yIq-1B-H22"/>
+                            <constraint firstItem="15r-hm-PMh" firstAttribute="leading" secondItem="ssS-Up-qeU" secondAttribute="leading" constant="84" id="zCa-Pd-XTo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssS-Up-qeU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SfF-3u-p9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1427" y="297"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="321" height="321"/>
+    </resources>
 </document>

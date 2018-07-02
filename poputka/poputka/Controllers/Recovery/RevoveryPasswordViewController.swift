@@ -14,4 +14,13 @@ class RevoveryPasswordViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    @IBAction func OkButton(_ sender: BlueButton) {
+        present(storyboard: "Recovery", viewController: "RecoveryViewController")
+    }
 }

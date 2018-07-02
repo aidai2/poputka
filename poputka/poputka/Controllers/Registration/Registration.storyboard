@@ -78,14 +78,14 @@
                                     <constraint firstAttribute="height" constant="45" id="irg-Uj-nfY"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EE9-iG-XzY">
-                                <rect key="frame" x="115.5" y="171.5" width="145" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EE9-iG-XzY" customClass="PageTitleLabel" customModule="poputka" customModuleProvider="target">
+                                <rect key="frame" x="115" y="183.5" width="145" height="28"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                 <color key="textColor" red="0.32156862745098036" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Gzm-Tc-cDF">
-                                <rect key="frame" x="155" y="66.5" width="65" height="65"/>
+                                <rect key="frame" x="155" y="93.5" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="Zes-ux-DYg"/>
                                     <constraint firstAttribute="height" constant="65" id="kyu-eZ-lam"/>
@@ -122,7 +122,7 @@
                         <constraints>
                             <constraint firstItem="Gzm-Tc-cDF" firstAttribute="centerX" secondItem="ACW-Ls-FLG" secondAttribute="centerX" id="AGs-2F-8If"/>
                             <constraint firstItem="eGF-R2-ld7" firstAttribute="centerY" secondItem="ACW-Ls-FLG" secondAttribute="centerY" id="BJs-bC-pgv"/>
-                            <constraint firstItem="QFM-Ha-8X8" firstAttribute="top" secondItem="EE9-iG-XzY" secondAttribute="bottom" constant="32" id="GB8-3k-Hqb"/>
+                            <constraint firstItem="QFM-Ha-8X8" firstAttribute="top" secondItem="EE9-iG-XzY" secondAttribute="bottom" constant="20" id="GB8-3k-Hqb"/>
                             <constraint firstItem="QCY-SE-wae" firstAttribute="trailing" secondItem="eGF-R2-ld7" secondAttribute="trailing" constant="32" id="GV8-yy-Pn9"/>
                             <constraint firstItem="eGF-R2-ld7" firstAttribute="leading" secondItem="QFM-Ha-8X8" secondAttribute="leading" id="GXt-F6-Wmg"/>
                             <constraint firstItem="eGF-R2-ld7" firstAttribute="top" secondItem="QFM-Ha-8X8" secondAttribute="bottom" constant="32" id="Ho9-bQ-0LT"/>
@@ -131,7 +131,7 @@
                             <constraint firstItem="W6E-jh-pLK" firstAttribute="height" secondItem="ItJ-yI-TEc" secondAttribute="height" id="Ka0-kv-KP4"/>
                             <constraint firstItem="cxb-US-duY" firstAttribute="leading" secondItem="GR2-OH-UVK" secondAttribute="leading" id="Lzz-Db-894"/>
                             <constraint firstItem="ItJ-yI-TEc" firstAttribute="top" secondItem="eGF-R2-ld7" secondAttribute="bottom" constant="8" id="Mft-KT-1Ua"/>
-                            <constraint firstItem="EE9-iG-XzY" firstAttribute="top" secondItem="Gzm-Tc-cDF" secondAttribute="bottom" constant="40" id="NOL-vg-AuQ"/>
+                            <constraint firstItem="EE9-iG-XzY" firstAttribute="top" secondItem="Gzm-Tc-cDF" secondAttribute="bottom" constant="25" id="NOL-vg-AuQ"/>
                             <constraint firstItem="QCY-SE-wae" firstAttribute="trailing" secondItem="DQu-3W-8gY" secondAttribute="trailing" constant="45" id="PwK-It-4Rh"/>
                             <constraint firstItem="W6E-jh-pLK" firstAttribute="trailing" secondItem="ItJ-yI-TEc" secondAttribute="trailing" id="QYk-un-ChO"/>
                             <constraint firstItem="DQu-3W-8gY" firstAttribute="leading" secondItem="QCY-SE-wae" secondAttribute="leading" constant="45" id="RXZ-gZ-NhZ"/>

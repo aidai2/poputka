@@ -14,4 +14,15 @@ class RecoveryViewController: UIViewController {
         super.viewDidLoad()
 
     }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    @IBAction func ConfirmPasswordButton(_ sender: BlueButton) {
+        present(storyboard: "Main", viewController: "SidebarOverlayViewController")
+    }
 }
+

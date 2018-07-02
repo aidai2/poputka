@@ -22,6 +22,9 @@ class LoginViewController: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 
+    @IBAction func forgotPassword(_ sender: UIButton) {
+        present(storyboard: "Recovery", viewController:"RecoveryPhoneViewController")
+    }
     @IBAction func registrationButton(_ sender: RegistrationButton) {
         present(storyboard: "Registration", viewController: "RegistrationViewController")
     }
@@ -30,6 +33,13 @@ class LoginViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.tintColor = Colors.blue
         navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.layer.shadowColor = Colors.shadowGray.cgColor
+        navigationController?.navigationBar.layer.shadowOffset  = CGSize(width: 0.0, height: 2.0)
+        navigationController?.navigationBar.layer.shadowRadius = 4.0
+        navigationController?.navigationBar.layer.shadowOpacity = 1.0
+    
+     
+        
     }
 }
