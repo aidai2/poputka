@@ -28,6 +28,9 @@ class LoginViewController: UIViewController {
     @IBAction func registrationButton(_ sender: RegistrationButton) {
         present(storyboard: "Registration", viewController: "RegistrationViewController")
     }
+    @IBAction func EnterButton(_ sender: Any) {
+        present(storyboard: "Main", viewController: "MainViewController")
+    }
     
     private func setupNavigationBar() {
         navigationController?.navigationBar.barTintColor = .white

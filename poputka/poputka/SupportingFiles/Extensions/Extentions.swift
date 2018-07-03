@@ -43,7 +43,7 @@ extension UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    func viewControllerWith(storyboard: String, identifier: String) -> UIViewController {
+    func viewControllerWith(identifier: String, storyboard: String) -> UIViewController {
         let sb = UIStoryboard(name: storyboard, bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: identifier)
         return vc
@@ -58,9 +58,12 @@ extension UIViewController {
     
     @objc private func showMenu() {
         if let container = self.so_containerViewController {
-            container.isSideViewControllerPresented = false
+            container.isSideViewControllerPresented = true
         }
     }
+    
+    
+
 
 
 }

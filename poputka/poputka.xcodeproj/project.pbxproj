@@ -10,7 +10,6 @@
 		84135B0A20E62ADB001F6531 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84135B0920E62ADB001F6531 /* Login.storyboard */; };
 		84135B0D20E62AFF001F6531 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84135B0C20E62AFF001F6531 /* Registration.storyboard */; };
 		84135B1020E62B2A001F6531 /* Recovery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84135B0F20E62B2A001F6531 /* Recovery.storyboard */; };
-		84135B1520E62EEC001F6531 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135B1420E62EEC001F6531 /* MainViewController.swift */; };
 		84135B1720E62F33001F6531 /* RecoveryPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135B1620E62F33001F6531 /* RecoveryPhoneViewController.swift */; };
 		84135B1920E62F52001F6531 /* RevoveryPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135B1820E62F52001F6531 /* RevoveryPasswordViewController.swift */; };
 		84135B1B20E62F64001F6531 /* RecoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135B1A20E62F64001F6531 /* RecoveryViewController.swift */; };
@@ -34,10 +33,13 @@
 		843701A320E10B9500910A1D /* poputkaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843701A220E10B9500910A1D /* poputkaTests.swift */; };
 		843701AE20E10B9500910A1D /* poputkaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843701AD20E10B9500910A1D /* poputkaUITests.swift */; };
 		84AC902120EA1F7400D65752 /* PageTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC902020EA1F7400D65752 /* PageTitleLabel.swift */; };
-		84AC902320EA42EA00D65752 /* SidebarOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC902220EA42EA00D65752 /* SidebarOverlayViewController.swift */; };
-		84AC902520EA4B2700D65752 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC902420EA4B2700D65752 /* MenuViewController.swift */; };
 		84AC902820EA4FAB00D65752 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC902720EA4FAB00D65752 /* MenuTableViewCell.swift */; };
-		CDF0B0EDA5D46C667F22D813 /* libPods-poputka.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D72D7CEA973CF9D6028E7E66 /* libPods-poputka.a */; };
+		84F486A120EB56BF0005C153 /* SidebarOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F486A020EB56BF0005C153 /* SidebarOverlay.swift */; };
+		84F486A320EB578D0005C153 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F486A220EB578D0005C153 /* MainViewController.swift */; };
+		84F486A520EB58000005C153 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F486A420EB58000005C153 /* MenuViewController.swift */; };
+		84F486A820EB76AA0005C153 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 84F486A720EB76AA0005C153 /* style.json */; };
+		84F486AA20EB77780005C153 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F486A920EB77780005C153 /* Style.swift */; };
+		95710539F2BB74B1DBD4EE8A /* Pods_poputka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B35595F8300CE869C7A24DD /* Pods_poputka.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		676D12FC5E4079CC5C47878D /* Pods-poputka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poputka.release.xcconfig"; path = "Pods/Target Support Files/Pods-poputka/Pods-poputka.release.xcconfig"; sourceTree = "<group>"; };
 		84135B0920E62ADB001F6531 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		84135B0C20E62AFF001F6531 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		84135B0F20E62B2A001F6531 /* Recovery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recovery.storyboard; sourceTree = "<group>"; };
-		84135B1420E62EEC001F6531 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		84135B1620E62F33001F6531 /* RecoveryPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPhoneViewController.swift; sourceTree = "<group>"; };
 		84135B1820E62F52001F6531 /* RevoveryPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevoveryPasswordViewController.swift; sourceTree = "<group>"; };
 		84135B1A20E62F64001F6531 /* RecoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryViewController.swift; sourceTree = "<group>"; };
@@ -92,11 +92,15 @@
 		843701AD20E10B9500910A1D /* poputkaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poputkaUITests.swift; sourceTree = "<group>"; };
 		843701AF20E10B9500910A1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84AC902020EA1F7400D65752 /* PageTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleLabel.swift; sourceTree = "<group>"; };
-		84AC902220EA42EA00D65752 /* SidebarOverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarOverlayViewController.swift; sourceTree = "<group>"; };
-		84AC902420EA4B2700D65752 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		84AC902720EA4FAB00D65752 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
-		A5570D0E15473E474BBFB4A3 /* Pods-poputka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poputka.debug.xcconfig"; path = "Pods/Target Support Files/Pods-poputka/Pods-poputka.debug.xcconfig"; sourceTree = "<group>"; };
-		D72D7CEA973CF9D6028E7E66 /* libPods-poputka.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-poputka.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F486A020EB56BF0005C153 /* SidebarOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarOverlay.swift; sourceTree = "<group>"; };
+		84F486A220EB578D0005C153 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		84F486A420EB58000005C153 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		84F486A720EB76AA0005C153 /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
+		84F486A920EB77780005C153 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		9B35595F8300CE869C7A24DD /* Pods_poputka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_poputka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA3DC706BD3560BEDB244BAB /* Pods-poputka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poputka.release.xcconfig"; path = "Pods/Target Support Files/Pods-poputka/Pods-poputka.release.xcconfig"; sourceTree = "<group>"; };
+		FD08AAE77C8ABFB62BD09D59 /* Pods-poputka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poputka.debug.xcconfig"; path = "Pods/Target Support Files/Pods-poputka/Pods-poputka.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDF0B0EDA5D46C667F22D813 /* libPods-poputka.a in Frameworks */,
+				95710539F2BB74B1DBD4EE8A /* Pods_poputka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,11 +129,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		49DA0B28BEC71234E506AD74 /* Pods */ = {
+		0F26637C8A4D258B6FF6FC57 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A5570D0E15473E474BBFB4A3 /* Pods-poputka.debug.xcconfig */,
-				676D12FC5E4079CC5C47878D /* Pods-poputka.release.xcconfig */,
+				FD08AAE77C8ABFB62BD09D59 /* Pods-poputka.debug.xcconfig */,
+				AA3DC706BD3560BEDB244BAB /* Pods-poputka.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -167,11 +171,13 @@
 		84135B1120E62B47001F6531 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				84F486AB20EB7B1A0005C153 /* SegmentedController */,
+				84F486A620EB767E0005C153 /* Networks */,
 				84135B2F20E64C03001F6531 /* Font */,
 				84135B2E20E649F0001F6531 /* Extensions */,
 				84135B2D20E649E7001F6531 /* CustomUI */,
-				84135B2B20E646DD001F6531 /* HBSegmentedControl.swift */,
 				84135B2520E63303001F6531 /* Constants.swift */,
+				84AC902620EA4F8300D65752 /* Cells */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -179,7 +185,6 @@
 		84135B1220E62DC8001F6531 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				84AC902620EA4F8300D65752 /* Cells */,
 				84135B1320E62EA5001F6531 /* Main */,
 				84135B0E20E62B04001F6531 /* Recovery */,
 				84135B0B20E62AE2001F6531 /* Registration */,
@@ -192,9 +197,9 @@
 			isa = PBXGroup;
 			children = (
 				8437019120E10B9500910A1D /* Main.storyboard */,
-				84135B1420E62EEC001F6531 /* MainViewController.swift */,
-				84AC902220EA42EA00D65752 /* SidebarOverlayViewController.swift */,
-				84AC902420EA4B2700D65752 /* MenuViewController.swift */,
+				84F486A020EB56BF0005C153 /* SidebarOverlay.swift */,
+				84F486A220EB578D0005C153 /* MainViewController.swift */,
+				84F486A420EB58000005C153 /* MenuViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -237,8 +242,8 @@
 				843701A120E10B9500910A1D /* poputkaTests */,
 				843701AC20E10B9500910A1D /* poputkaUITests */,
 				8437018B20E10B9500910A1D /* Products */,
-				49DA0B28BEC71234E506AD74 /* Pods */,
-				E4168F0A8B2D0C1AE42F9B14 /* Frameworks */,
+				0F26637C8A4D258B6FF6FC57 /* Pods */,
+				C06AA78E518C99E92B1BFEBE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -291,10 +296,27 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		E4168F0A8B2D0C1AE42F9B14 /* Frameworks */ = {
+		84F486A620EB767E0005C153 /* Networks */ = {
 			isa = PBXGroup;
 			children = (
-				D72D7CEA973CF9D6028E7E66 /* libPods-poputka.a */,
+				84F486A720EB76AA0005C153 /* style.json */,
+				84F486A920EB77780005C153 /* Style.swift */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		84F486AB20EB7B1A0005C153 /* SegmentedController */ = {
+			isa = PBXGroup;
+			children = (
+				84135B2B20E646DD001F6531 /* HBSegmentedControl.swift */,
+			);
+			path = SegmentedController;
+			sourceTree = "<group>";
+		};
+		C06AA78E518C99E92B1BFEBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B35595F8300CE869C7A24DD /* Pods_poputka.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -306,11 +328,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 843701B220E10B9500910A1D /* Build configuration list for PBXNativeTarget "poputka" */;
 			buildPhases = (
-				8FD2E0C7AEE13C687366FDA1 /* [CP] Check Pods Manifest.lock */,
+				01C49A7E087F2742013FE23B /* [CP] Check Pods Manifest.lock */,
 				8437018620E10B9500910A1D /* Sources */,
 				8437018720E10B9500910A1D /* Frameworks */,
 				8437018820E10B9500910A1D /* Resources */,
-				4E59DEFE3B526AE02FAE3BBF /* [CP] Copy Pods Resources */,
+				D11A7C69E3E32C6F3946952D /* [CP] Copy Pods Resources */,
+				A3E040B378EF8515650090DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -411,6 +434,7 @@
 				84135B3820E64EF0001F6531 /* Roboto-Medium.ttf in Resources */,
 				84135B0D20E62AFF001F6531 /* Registration.storyboard in Resources */,
 				84135B0A20E62ADB001F6531 /* Login.storyboard in Resources */,
+				84F486A820EB76AA0005C153 /* style.json in Resources */,
 				84135B3620E64EEC001F6531 /* Roboto-Regular.ttf in Resources */,
 				8437019820E10B9500910A1D /* LaunchScreen.storyboard in Resources */,
 				8437019520E10B9500910A1D /* Assets.xcassets in Resources */,
@@ -439,29 +463,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4E59DEFE3B526AE02FAE3BBF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-poputka/Pods-poputka-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
-				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-poputka/Pods-poputka-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8FD2E0C7AEE13C687366FDA1 /* [CP] Check Pods Manifest.lock */ = {
+		01C49A7E087F2742013FE23B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -479,6 +481,52 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A3E040B378EF8515650090DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-poputka/Pods-poputka-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/SidebarOverlay/SidebarOverlay.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SidebarOverlay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-poputka/Pods-poputka-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D11A7C69E3E32C6F3946952D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-poputka/Pods-poputka-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-poputka/Pods-poputka-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -492,16 +540,17 @@
 				84135B1B20E62F64001F6531 /* RecoveryViewController.swift in Sources */,
 				8437018E20E10B9500910A1D /* AppDelegate.swift in Sources */,
 				84AC902820EA4FAB00D65752 /* MenuTableViewCell.swift in Sources */,
+				84F486A120EB56BF0005C153 /* SidebarOverlay.swift in Sources */,
+				84F486AA20EB77780005C153 /* Style.swift in Sources */,
+				84F486A320EB578D0005C153 /* MainViewController.swift in Sources */,
 				84135B2120E63104001F6531 /* BlueView.swift in Sources */,
 				84135B2620E63303001F6531 /* Constants.swift in Sources */,
-				84AC902520EA4B2700D65752 /* MenuViewController.swift in Sources */,
 				84135B1720E62F33001F6531 /* RecoveryPhoneViewController.swift in Sources */,
-				84135B1520E62EEC001F6531 /* MainViewController.swift in Sources */,
+				84F486A520EB58000005C153 /* MenuViewController.swift in Sources */,
 				84135B2820E634E0001F6531 /* BlueButton.swift in Sources */,
 				84135B1920E62F52001F6531 /* RevoveryPasswordViewController.swift in Sources */,
 				84135B2A20E63974001F6531 /* RegistrationButton.swift in Sources */,
 				84135B2420E6323E001F6531 /* Extentions.swift in Sources */,
-				84AC902320EA42EA00D65752 /* SidebarOverlayViewController.swift in Sources */,
 				84135B2C20E646DD001F6531 /* HBSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -666,7 +715,7 @@
 		};
 		843701B320E10B9500910A1D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5570D0E15473E474BBFB4A3 /* Pods-poputka.debug.xcconfig */;
+			baseConfigurationReference = FD08AAE77C8ABFB62BD09D59 /* Pods-poputka.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -683,7 +732,7 @@
 		};
 		843701B420E10B9500910A1D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 676D12FC5E4079CC5C47878D /* Pods-poputka.release.xcconfig */;
+			baseConfigurationReference = AA3DC706BD3560BEDB244BAB /* Pods-poputka.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

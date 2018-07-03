@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UZN-y6-UIg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -79,13 +79,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EE9-iG-XzY" customClass="PageTitleLabel" customModule="poputka" customModuleProvider="target">
-                                <rect key="frame" x="115" y="183.5" width="145" height="28"/>
+                                <rect key="frame" x="115.5" y="183" width="145" height="28.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                 <color key="textColor" red="0.32156862745098036" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Gzm-Tc-cDF">
-                                <rect key="frame" x="155" y="93.5" width="65" height="65"/>
+                                <rect key="frame" x="155" y="93" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="Zes-ux-DYg"/>
                                     <constraint firstAttribute="height" constant="65" id="kyu-eZ-lam"/>
@@ -100,13 +100,14 @@
                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E00-CG-vpd">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E00-CG-vpd">
                                         <rect key="frame" x="267" y="6" width="38" height="38"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="38" id="KRY-Hu-bOO"/>
                                             <constraint firstAttribute="height" constant="38" id="aYf-b0-Dqw"/>
                                         </constraints>
+                                        <state key="normal" image="cityList"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -156,10 +157,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dx2-do-URx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399.375" y="280.98591549295776"/>
+            <point key="canvasLocation" x="399.19999999999999" y="280.20989505247377"/>
         </scene>
     </scenes>
     <resources>
+        <image name="cityList" width="48" height="48"/>
         <image name="logo" width="321" height="321"/>
     </resources>
 </document>
