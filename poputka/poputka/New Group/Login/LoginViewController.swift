@@ -25,11 +25,13 @@ class LoginViewController: UIViewController {
     @IBAction func forgotPassword(_ sender: UIButton) {
         present(storyboard: "Recovery", viewController:"RecoveryPhoneViewController")
     }
+    
     @IBAction func registrationButton(_ sender: RegistrationButton) {
         present(storyboard: "Registration", viewController: "RegistrationViewController")
     }
+    
     @IBAction func EnterButton(_ sender: Any) {
-        present(storyboard: "Main", viewController: "MainViewController")
+        present(storyboard: "Main", viewController: "SidebarOverlay")
     }
     
     private func setupNavigationBar() {
@@ -41,8 +43,5 @@ class LoginViewController: UIViewController {
         navigationController?.navigationBar.layer.shadowOffset  = CGSize(width: 0.0, height: 2.0)
         navigationController?.navigationBar.layer.shadowRadius = 4.0
         navigationController?.navigationBar.layer.shadowOpacity = 1.0
-    
-     
-        
+        }
     }
-}

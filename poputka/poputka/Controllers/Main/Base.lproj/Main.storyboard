@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3NV-ho-Guf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -17,14 +23,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pX0-ly-Jkd">
+                                <rect key="frame" x="154" y="555" width="67" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="GFh-Eg-aD2"/>
+                                    <constraint firstAttribute="height" constant="67" id="SH7-5M-XC3"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="formeButton"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pX0-ly-Jkd" secondAttribute="bottom" constant="45" id="BNj-TH-oC4"/>
+                            <constraint firstItem="pX0-ly-Jkd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wA6-Hh-fcZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="p1I-Eh-t3V"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-184.80000000000001" y="134.48275862068968"/>
+            <point key="canvasLocation" x="-294" y="134"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="aSj-h8-6bM">
@@ -34,17 +54,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Upw-dP-Q4u">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Upw-dP-Q4u">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.10980392156862745" green="0.30980392156862746" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.10942695289850235" green="0.31035053730010986" blue="0.68888801336288452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="gUg-1C-LtL">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuTableViewCell" id="7b5-FW-YjV" customClass="MenuTableViewCell" customModule="poputka" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="238" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7b5-FW-YjV" id="h5s-9r-dff">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8M-gI-JN3">
+                                                    <rect key="frame" x="41" y="16.5" width="293" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="n8M-gI-JN3" secondAttribute="bottom" id="KpC-jg-8cb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="n8M-gI-JN3" secondAttribute="trailing" constant="26" id="Q0g-Vp-uAC"/>
+                                                <constraint firstItem="n8M-gI-JN3" firstAttribute="leading" secondItem="h5s-9r-dff" secondAttribute="leadingMargin" constant="26" id="gN4-Sz-yzg"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="menuLabel" destination="n8M-gI-JN3" id="Tln-dm-t9a"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -57,15 +99,18 @@
                         <constraints>
                             <constraint firstItem="zy3-0R-oI6" firstAttribute="trailing" secondItem="Upw-dP-Q4u" secondAttribute="trailing" id="Fz1-03-ax4"/>
                             <constraint firstItem="zy3-0R-oI6" firstAttribute="bottom" secondItem="Upw-dP-Q4u" secondAttribute="bottom" id="Use-hq-I91"/>
+                            <constraint firstItem="Upw-dP-Q4u" firstAttribute="top" secondItem="hUt-O7-D9G" secondAttribute="top" id="jpv-1Z-s0R"/>
                             <constraint firstItem="Upw-dP-Q4u" firstAttribute="leading" secondItem="zy3-0R-oI6" secondAttribute="leading" id="mGM-qb-81h"/>
-                            <constraint firstItem="Upw-dP-Q4u" firstAttribute="top" secondItem="zy3-0R-oI6" secondAttribute="top" id="xr0-J9-BrJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zy3-0R-oI6"/>
                     </view>
+                    <connections>
+                        <outlet property="profileView" destination="gUg-1C-LtL" id="MEd-cq-T8d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oDJ-AB-nyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="465" y="137"/>
+            <point key="canvasLocation" x="348" y="133.5832083958021"/>
         </scene>
         <!--SidebarOverlay-->
         <scene sceneID="jQq-Lz-uwA">
@@ -80,7 +125,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23j-RE-GRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-831" y="134"/>
+            <point key="canvasLocation" x="-921" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="formeButton" width="87" height="87"/>
+    </resources>
 </document>

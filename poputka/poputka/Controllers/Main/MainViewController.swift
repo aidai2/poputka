@@ -9,27 +9,28 @@
 import UIKit
 import  GoogleMaps
 
-var latitude = 42.810837
-var longitude = 74.627434
-var zoomLevel: Float = 16.1
-
-
-class MainViewController: UIViewController {
-
+class MainViewController: UIViewController, CLLocationManagerDelegate{
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        let image : UIImage = UIImage(named: "blue_logo")!
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
-        imageView.contentMode = .scaleAspectFit
-        imageView.image = image
-        self.navigationItem.titleView = imageView
-
+ 
+        setupGoogleMap()
+//        setupMenuBarButton()
+       
+    }
+    private func setupGoogleMap() {
+//        let latitude = 42.810837
+//        let longitude = 74.627434
+        let zoomLevel: Float = 16.1
+        let locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        let lat = locationManager.location?.coordinate.latitude
+        let long = locationManager.location?.coordinate.longitude
         
-        
-        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: zoomLevel)
+        let camera = GMSCameraPosition.camera(withLatitude: lat!, longitude: long!, zoom: zoomLevel)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-
+        
         do {
             if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
                 mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
@@ -43,15 +44,9 @@ class MainViewController: UIViewController {
         self.view = mapView
         
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-//        marker.title = "AUCA"
-//        marker.snippet = "Bishkek"
+        marker.position = CLLocationCoordinate2D(latitude: lat!, longitude: long!)
+        marker.title = "AUCA"
+        marker.snippet = "Bishkek"
         marker.map = mapView
-        
-
-//        setupMenuBarButton()
-        
     }
-
-    
 }

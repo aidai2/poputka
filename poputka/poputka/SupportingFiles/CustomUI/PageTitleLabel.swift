@@ -9,6 +9,7 @@
 import UIKit
 
 class PageTitleLabel: UILabel {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLabel()
@@ -23,6 +24,5 @@ class PageTitleLabel: UILabel {
     private func setupLabel() {
         self.textColor = Colors.darkGray
         self.font = UIFont(name: "Roboto-Bold", size: 24)
-    
     }
 }

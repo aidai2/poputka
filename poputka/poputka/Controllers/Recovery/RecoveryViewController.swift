@@ -22,7 +22,7 @@ class RecoveryViewController: UIViewController {
     }
     
     @IBAction func ConfirmPasswordButton(_ sender: BlueButton) {
-        present(storyboard: "Main", viewController: "MainViewController")
+        present(storyboard: "Main", viewController: "SidebarOverlay")
     }
 }
 

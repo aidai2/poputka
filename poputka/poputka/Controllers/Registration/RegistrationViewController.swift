@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class RegistrationViewController: UIViewController {
 
     @IBOutlet weak var confidentialButton: UIButton!
@@ -19,7 +18,6 @@ class RegistrationViewController: UIViewController {
 
         setupSegmentedControl()
         confidentialButton.underline()
-    
     }
     
     private func setupSegmentedControl() {

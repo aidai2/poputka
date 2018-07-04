@@ -60,7 +60,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hP3-Mr-MRD">
-                                <rect key="frame" x="51" y="482.5" width="273" height="30"/>
+                                <rect key="frame" x="52" y="482.5" width="271" height="30"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="15"/>
                                 <state key="normal" title="Политика использования приложения"/>
                             </button>
@@ -79,13 +79,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EE9-iG-XzY" customClass="PageTitleLabel" customModule="poputka" customModuleProvider="target">
-                                <rect key="frame" x="115.5" y="183" width="145" height="28.5"/>
+                                <rect key="frame" x="116.5" y="183.5" width="143.5" height="28"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                 <color key="textColor" red="0.32156862745098036" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Gzm-Tc-cDF">
-                                <rect key="frame" x="155" y="93" width="65" height="65"/>
+                                <rect key="frame" x="155" y="93.5" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="Zes-ux-DYg"/>
                                     <constraint firstAttribute="height" constant="65" id="kyu-eZ-lam"/>

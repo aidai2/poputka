@@ -177,7 +177,6 @@
 				84135B2E20E649F0001F6531 /* Extensions */,
 				84135B2D20E649E7001F6531 /* CustomUI */,
 				84135B2520E63303001F6531 /* Constants.swift */,
-				84AC902620EA4F8300D65752 /* Cells */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -185,6 +184,7 @@
 		84135B1220E62DC8001F6531 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84AC902620EA4F8300D65752 /* Cells */,
 				84135B1320E62EA5001F6531 /* Main */,
 				84135B0E20E62B04001F6531 /* Recovery */,
 				84135B0B20E62AE2001F6531 /* Registration */,
