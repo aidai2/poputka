@@ -10,11 +10,25 @@ import UIKit
 import  GoogleMaps
 
 class MainViewController: UIViewController, CLLocationManagerDelegate{
+    
     override func viewDidLoad() {
- 
+        
         setupGoogleMap()
-//        setupMenuBarButton()
-       
+        setupNavigationBar()
+        setupImage()
+        setupMenuBarButton()
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    private func setupImage() {
+        let image: UIImage = UIImage(named: "blue_logo")!
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = image
+        navigationItem.titleView = imageView
     }
     private func setupGoogleMap() {
 //        let latitude = 42.810837

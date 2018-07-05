@@ -14,7 +14,9 @@ struct Colors {
     static let blue = UIColor.init(netHex: 0x2968E2)
     static let gray = UIColor.init(netHex: 0xE0E0E0)
     static let darkGray = UIColor.init(netHex: 0x525252)
-//    static let cellColor = UIColor.init(netHex: 0x1C4FB0)
+    static let darkBlue = UIColor.init(netHex: 0x1C4FB0)
+    static let segmentedDarkBlue = UIColor.init(netHex: 0x153F91)
+    static let segmentedLightBlue = UIColor.init(netHex: 0x4A86FC)
     static let shadowGray = UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.15)
     
     
@@ -28,7 +30,11 @@ struct SideMenu {
         var vc: String
     }
     
-    static let menu = [ViewControllers(title: "Карта", sb: "Main", vc: "MainViewController"),
-                       ViewControllers(title: "Логин", sb:"Login", vc: "LoginViewController")]
+    static let menu = [ViewControllers(title: "Карта", sb: "Main", vc: "MainViewController")]
 
+}
+
+struct ProfileInfo {
+    
+    static let list = ["Имя", "Номер телефона", "Город", "Статус"]
 }

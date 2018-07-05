@@ -60,7 +60,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hP3-Mr-MRD">
-                                <rect key="frame" x="52" y="482.5" width="271" height="30"/>
+                                <rect key="frame" x="51" y="482.5" width="273" height="30"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="15"/>
                                 <state key="normal" title="Политика использования приложения"/>
                             </button>
@@ -70,6 +70,9 @@
                                     <constraint firstAttribute="height" constant="45" id="ga0-OD-yfd"/>
                                 </constraints>
                                 <state key="normal" title="Зарегистрироваться"/>
+                                <connections>
+                                    <action selector="registredButton:" destination="UZN-y6-UIg" eventType="touchUpInside" id="4pp-cR-2UW"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFM-Ha-8X8" customClass="HBSegmentedControl" customModule="poputka" customModuleProvider="target">
                                 <rect key="frame" x="32" y="231.5" width="311" height="45"/>
@@ -79,7 +82,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EE9-iG-XzY" customClass="PageTitleLabel" customModule="poputka" customModuleProvider="target">
-                                <rect key="frame" x="116.5" y="183.5" width="143.5" height="28"/>
+                                <rect key="frame" x="115" y="183.5" width="145" height="28"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                 <color key="textColor" red="0.32156862745098036" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

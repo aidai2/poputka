@@ -9,11 +9,16 @@
 import UIKit
 class MenuViewController: UIViewController {
     
-    @IBOutlet weak var profileView: UIView!
+    @IBOutlet weak var ProfileView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileView.layer.backgroundColor = Colors.blue.cgColor
+        ProfileView.backgroundColor = Colors.blue
+    }
+    
+    @IBAction func profileButton(_ sender: Any) {
+        let vc = viewControllerWith(identifier: "ProfileViewController", storyboard: "Profile")
+        present(vc, animated: true, completion: nil)
     }
 }
 
@@ -32,6 +37,11 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as! MenuTableViewCell
         cell.backgroundColor = UIColor.clear
         cell.menuLabel.text = SideMenu.menu[indexPath.row].title
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.clear
+        cell.selectedBackgroundView = backgroundView
+
         return cell
     }
     
@@ -41,6 +51,7 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
         let vc = viewControllerWith(identifier: vcs.vc, storyboard: vcs.sb)
         so_containerViewController?.topViewController = UINavigationController(rootViewController: vc)
         so_containerViewController?.isSideViewControllerPresented = false
+        
     }
     
 }

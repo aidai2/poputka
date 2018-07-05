@@ -54,14 +54,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Upw-dP-Q4u">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Upw-dP-Q4u">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.10980392156862745" green="0.30980392156862746" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.10942695289850235" green="0.31035053730010986" blue="0.68888801336288452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="gUg-1C-LtL">
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="gUg-1C-LtL" customClass="ProfileView" customModule="poputka" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wO6-dY-KKI">
+                                            <rect key="frame" x="20" y="142" width="45" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="ESd-SL-Faz"/>
+                                                <constraint firstAttribute="width" constant="45" id="eCN-9v-6VN"/>
+                                            </constraints>
+                                            <state key="normal" image="profile"/>
+                                            <connections>
+                                                <action selector="profileButton:" destination="WDO-iU-2SK" eventType="touchUpInside" id="GEa-Bw-zgv"/>
+                                            </connections>
+                                        </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="w9y-cX-9ZE">
+                                            <rect key="frame" x="147" y="0.0" width="81" height="81"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="81" id="1u1-iQ-lYi"/>
+                                                <constraint firstAttribute="width" constant="81" id="bLX-0S-LZ1"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="w9y-cX-9ZE" firstAttribute="centerX" secondItem="gUg-1C-LtL" secondAttribute="centerX" id="Dig-Mh-DRO"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="wO6-dY-KKI" secondAttribute="bottom" constant="15" id="Nxa-w9-7cl"/>
+                                        <constraint firstItem="w9y-cX-9ZE" firstAttribute="top" secondItem="gUg-1C-LtL" secondAttribute="top" id="RfT-kM-lZO"/>
+                                        <constraint firstItem="wO6-dY-KKI" firstAttribute="leading" secondItem="gUg-1C-LtL" secondAttribute="leadingMargin" constant="12" id="zka-vf-kZo"/>
+                                    </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuTableViewCell" id="7b5-FW-YjV" customClass="MenuTableViewCell" customModule="poputka" customModuleProvider="target">
@@ -105,6 +131,7 @@
                         <viewLayoutGuide key="safeArea" id="zy3-0R-oI6"/>
                     </view>
                     <connections>
+                        <outlet property="ProfileView" destination="gUg-1C-LtL" id="0lS-6w-sLY"/>
                         <outlet property="profileView" destination="gUg-1C-LtL" id="MEd-cq-T8d"/>
                     </connections>
                 </viewController>
@@ -130,5 +157,7 @@
     </scenes>
     <resources>
         <image name="formeButton" width="87" height="87"/>
+        <image name="logo" width="321" height="321"/>
+        <image name="profile" width="36" height="36"/>
     </resources>
 </document>

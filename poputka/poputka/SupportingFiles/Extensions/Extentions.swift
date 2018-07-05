@@ -49,6 +49,23 @@ extension UIViewController {
         return vc
     }
     
+    func setupNavigationBar() {
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.tintColor = Colors.blue
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.layer.shadowColor = Colors.shadowGray.cgColor
+        navigationController?.navigationBar.layer.shadowOffset  = CGSize(width: 0.0, height: 2.0)
+        navigationController?.navigationBar.layer.shadowRadius = 4.0
+        navigationController?.navigationBar.layer.shadowOpacity = 1.0
+    }
+    
+    func setupClearNavigation() {
+        
+        navigationController?.navigationBar.tintColor = Colors.blue
+        navigationController?.navigationBar.barTintColor = UIColor.white
+        navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
     func setupMenuBarButton() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "sideBar"),
                                                            style: .plain,
@@ -62,3 +79,5 @@ extension UIViewController {
         }
     }
 }
+
+

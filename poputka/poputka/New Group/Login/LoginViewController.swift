@@ -12,8 +12,9 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       setupClearNavigation()
 
-        setupNavigationBar()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -30,18 +31,9 @@ class LoginViewController: UIViewController {
         present(storyboard: "Registration", viewController: "RegistrationViewController")
     }
     
-    @IBAction func EnterButton(_ sender: Any) {
-        present(storyboard: "Main", viewController: "SidebarOverlay")
+    @IBAction func EnterButton(_ sender: UIButton) {
+        let vc = viewControllerWith(identifier: "SidebarOverlay", storyboard: "Main")
+        present(vc, animated: true, completion: nil)
     }
-    
-    private func setupNavigationBar() {
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.tintColor = Colors.blue
-        navigationController?.navigationBar.shadowImage = UIImage()
-//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.layer.shadowColor = Colors.shadowGray.cgColor
-        navigationController?.navigationBar.layer.shadowOffset  = CGSize(width: 0.0, height: 2.0)
-        navigationController?.navigationBar.layer.shadowRadius = 4.0
-        navigationController?.navigationBar.layer.shadowOpacity = 1.0
-        }
-    }
+
+}
