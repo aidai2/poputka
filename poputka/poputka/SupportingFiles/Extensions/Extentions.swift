@@ -59,11 +59,10 @@ extension UIViewController {
         navigationController?.navigationBar.layer.shadowOpacity = 1.0
     }
     
-    func setupClearNavigation() {
-        
+    func setupClearNavigationBar() {
         navigationController?.navigationBar.tintColor = Colors.blue
-        navigationController?.navigationBar.barTintColor = UIColor.white
         navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     }
     
     func setupMenuBarButton() {

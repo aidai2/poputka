@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840596AF20F3811F00E54DD2 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840596AE20F3811F00E54DD2 /* ProfileViewCell.swift */; };
+		840596B120F3948A00E54DD2 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840596B020F3948A00E54DD2 /* FormViewController.swift */; };
 		84135B0A20E62ADB001F6531 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84135B0920E62ADB001F6531 /* Login.storyboard */; };
 		84135B0D20E62AFF001F6531 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84135B0C20E62AFF001F6531 /* Registration.storyboard */; };
 		84135B1020E62B2A001F6531 /* Recovery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84135B0F20E62B2A001F6531 /* Recovery.storyboard */; };
@@ -63,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840596AE20F3811F00E54DD2 /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
+		840596B020F3948A00E54DD2 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		84135B0920E62ADB001F6531 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		84135B0C20E62AFF001F6531 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		84135B0F20E62B2A001F6531 /* Recovery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recovery.storyboard; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 				84F486A020EB56BF0005C153 /* SidebarOverlay.swift */,
 				84F486A220EB578D0005C153 /* MainViewController.swift */,
 				84F486A420EB58000005C153 /* MenuViewController.swift */,
+				840596B020F3948A00E54DD2 /* FormViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 			children = (
 				84AC902720EA4FAB00D65752 /* MenuTableViewCell.swift */,
 				84FF053020EE412400407A9D /* ProfileInfoCell.swift */,
+				840596AE20F3811F00E54DD2 /* ProfileViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -509,6 +515,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/Jelly/Jelly.framework",
 				"${BUILT_PRODUCTS_DIR}/SidebarOverlay/SidebarOverlay.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -517,6 +524,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Jelly.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SidebarOverlay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -555,6 +563,7 @@
 				84AC902120EA1F7400D65752 /* PageTitleLabel.swift in Sources */,
 				84135B1F20E62F8F001F6531 /* LoginViewController.swift in Sources */,
 				84135B1D20E62F7B001F6531 /* RegistrationViewController.swift in Sources */,
+				840596AF20F3811F00E54DD2 /* ProfileViewCell.swift in Sources */,
 				84135B1B20E62F64001F6531 /* RecoveryViewController.swift in Sources */,
 				8437018E20E10B9500910A1D /* AppDelegate.swift in Sources */,
 				84AC902820EA4FAB00D65752 /* MenuTableViewCell.swift in Sources */,
@@ -563,6 +572,7 @@
 				84F486A320EB578D0005C153 /* MainViewController.swift in Sources */,
 				84FF053120EE412400407A9D /* ProfileInfoCell.swift in Sources */,
 				84FF052F20EE300800407A9D /* ProfileViewController.swift in Sources */,
+				840596B120F3948A00E54DD2 /* FormViewController.swift in Sources */,
 				84135B2120E63104001F6531 /* BlueView.swift in Sources */,
 				84135B2620E63303001F6531 /* Constants.swift in Sources */,
 				84135B1720E62F33001F6531 /* RecoveryPhoneViewController.swift in Sources */,

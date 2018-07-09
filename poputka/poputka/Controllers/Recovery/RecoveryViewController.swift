@@ -15,18 +15,8 @@ class RecoveryViewController: UIViewController {
 
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-            let image : UIImage = UIImage(named: "blue_logo")!
-            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
-            imageView.contentMode = .scaleAspectFit
-            imageView.image = image
-            navigationItem.titleView = imageView
-        }
-    
     @IBAction func ConfirmPasswordButton(_ sender: BlueButton) {
-      let vc = viewControllerWith(identifier: "SidebarOverlay", storyboard: "Main")
+        let vc = viewControllerWith(identifier: "SidebarOverlay", storyboard: "Main")
         present(vc, animated: true, completion: nil)
     }
 }

@@ -13,8 +13,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       setupClearNavigation()
-
+        setupClearNavigationBar()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -35,5 +34,4 @@ class LoginViewController: UIViewController {
         let vc = viewControllerWith(identifier: "SidebarOverlay", storyboard: "Main")
         present(vc, animated: true, completion: nil)
     }
-
 }

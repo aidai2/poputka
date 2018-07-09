@@ -7,20 +7,50 @@
 //
 
 import UIKit
-import  GoogleMaps
+import GoogleMaps
+import Jelly
 
-class MainViewController: UIViewController, CLLocationManagerDelegate{
+class MainViewController: UIViewController,GMSMapViewDelegate, CLLocationManagerDelegate{
     
+    private var mapView = GMSMapView()
+    private var button = UIButton()
     override func viewDidLoad() {
         
         setupGoogleMap()
         setupNavigationBar()
         setupImage()
         setupMenuBarButton()
+        setupFormButton()
+    }
+
+    
+    private func setupJelly() {
+        var jellyAnimator: JellyAnimator?
+        let customCornerSlideInPresentation = JellySlideInPresentation(cornerRadius: 23,
+                                                                       backgroundStyle: .dimmed(alpha: 0.3),
+                                                                       jellyness: .jelly,
+                                                                       duration: .medium,
+                                                                       directionShow: .bottom,
+                                                                       directionDismiss: .right,
+                                                                       widthForViewController: .custom(value: view.frame.size.width - 64),
+                                                                       heightForViewController: .custom(value: view.frame.size.height-128))
+        
+        let vc = viewControllerWith(identifier: "FormViewController", storyboard: "Main")
+        jellyAnimator = JellyAnimator(presentation: customCornerSlideInPresentation)
+        jellyAnimator?.prepare(viewController: vc)
+        present(vc, animated: true, completion: nil)
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return true
+    private func setupFormButton() {
+        button = UIButton(frame: CGRect(x: view.frame.midX - 30, y: view.frame.size.height - 80, width: 60, height: 60))
+        button.addTarget(self, action: #selector(formButtonClicked), for: .touchUpInside)
+        button.setImage(#imageLiteral(resourceName: "formeButton"), for: .normal)
+        view.addSubview(button)
+    }
+    
+    @objc private func formButtonClicked() {
+        setupJelly()
+        
     }
     
     private func setupImage() {
@@ -43,7 +73,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate{
         let long = locationManager.location?.coordinate.longitude
         
         let camera = GMSCameraPosition.camera(withLatitude: lat!, longitude: long!, zoom: zoomLevel)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
         
         do {
             if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
@@ -62,5 +92,6 @@ class MainViewController: UIViewController, CLLocationManagerDelegate{
         marker.title = "AUCA"
         marker.snippet = "Bishkek"
         marker.map = mapView
+//        marker.icon = #imageLiteral(resourceName: "marker")
     }
 }

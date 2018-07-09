@@ -15,8 +15,8 @@ class SidebarOverlay: SOContainerViewController {
         super.viewDidLoad()
         
         setupSidebar()
-
     }
+    
     private func setupSidebar() {
         let topVC = viewControllerWith(identifier: "MainViewController", storyboard: "Main")
         topViewController = UINavigationController(rootViewController: topVC)
