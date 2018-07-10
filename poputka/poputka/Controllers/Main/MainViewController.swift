@@ -8,21 +8,28 @@
 
 import UIKit
 import GoogleMaps
+import CoreLocation
 import Jelly
 
-class MainViewController: UIViewController,GMSMapViewDelegate, CLLocationManagerDelegate{
+class MainViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     
     private var mapView = GMSMapView()
     private var button = UIButton()
+    
     override func viewDidLoad() {
         
-        setupGoogleMap()
         setupNavigationBar()
         setupImage()
         setupMenuBarButton()
         setupFormButton()
+        setupRightBarButton()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setupGoogleMap()
+    }
     
     private func setupJelly() {
         var jellyAnimator: JellyAnimator?
@@ -52,6 +59,18 @@ class MainViewController: UIViewController,GMSMapViewDelegate, CLLocationManager
         setupJelly()
         
     }
+    private func setupRightBarButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "profile"),
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(showProfilePage))
+    }
+    
+    @objc private func showProfilePage() {
+        let vc = viewControllerWith(identifier: "ProfileViewController", storyboard: "Profile")
+        let nvc = UINavigationController(rootViewController: vc)
+        present(nvc, animated: true, completion: nil)
+    }
     
     private func setupImage() {
         let image: UIImage = UIImage(named: "blue_logo")!
@@ -60,38 +79,51 @@ class MainViewController: UIViewController,GMSMapViewDelegate, CLLocationManager
         imageView.image = image
         navigationItem.titleView = imageView
     }
+    
     private func setupGoogleMap() {
-//        let latitude = 42.810837
-//        let longitude = 74.627434
+        
+        if CLLocationManager.locationServicesEnabled() {
+            
+            
+            let locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+        }
+    
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        var currentLocation: CLLocation!
         let zoomLevel: Float = 16.1
-        let locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
-        let lat = locationManager.location?.coordinate.latitude
-        let long = locationManager.location?.coordinate.longitude
-        
-        let camera = GMSCameraPosition.camera(withLatitude: lat!, longitude: long!, zoom: zoomLevel)
-        mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
-        
-        do {
-            if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
-                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
-            } else {
-                NSLog("Unable to find style.json")
+        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
+            
+            currentLocation = manager.location
+            
+            let camera = GMSCameraPosition.camera(withLatitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude, zoom: zoomLevel)
+            mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+            
+            do {
+                if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
+                    mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+                } else {
+                    NSLog("Unable to find style.json")
+                }
+            } catch {
+                NSLog("One or more of the map styles failed to load. \(error)")
             }
-        } catch {
-            NSLog("One or more of the map styles failed to load. \(error)")
+            
+            self.view = mapView
+            
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+            marker.title = "AUCA"
+            marker.snippet = "Bishkek"
+            marker.map = mapView
+            marker.icon = #imageLiteral(resourceName: "marker")
         }
         
-        self.view = mapView
-        
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: lat!, longitude: long!)
-        marker.title = "AUCA"
-        marker.snippet = "Bishkek"
-        marker.map = mapView
-//        marker.icon = #imageLiteral(resourceName: "marker")
     }
 }

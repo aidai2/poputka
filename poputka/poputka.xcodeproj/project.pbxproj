@@ -86,6 +86,7 @@
 		84135B3220E64C66001F6531 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		84135B3320E64C73001F6531 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		84135B3420E64C84001F6531 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		8422C25820F4C6200067A909 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		8437018A20E10B9500910A1D /* poputka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poputka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8437018D20E10B9500910A1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8437019220E10B9500910A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -237,6 +238,7 @@
 		84135B2F20E64C03001F6531 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				8422C25820F4C6200067A909 /* Roboto-Italic.ttf */,
 				84135B3420E64C84001F6531 /* Roboto-Light.ttf */,
 				84135B3320E64C73001F6531 /* Roboto-Regular.ttf */,
 				84135B3220E64C66001F6531 /* Roboto-Bold.ttf */,

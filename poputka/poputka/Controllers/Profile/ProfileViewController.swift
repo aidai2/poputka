@@ -10,17 +10,26 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var ratingCircleView: UIView!
+    @IBOutlet weak var yourRatingLabel: UILabel!
     @IBOutlet weak var segmentedControl: HBSegmentedControl!
     @IBOutlet weak var profilePageTitle: UILabel!
     @IBOutlet weak var profileView: UIView!
+    @IBOutlet weak var ratingNumber: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        ratingNumber.textColor = Colors.ratingNumberColor
+        ratingNumber.font = UIFont(name: "Roboto-Bold", size: 48)
+        ratingCircleView.backgroundColor = UIColor.white
+        ratingCircleView.layer.cornerRadius = 47
+        yourRatingLabel.textColor = UIColor.white
+        yourRatingLabel.font = UIFont(name: "Roboto-MediumItalic", size: 24)
+       
         setupView()
         setupSegmentedControl()
         setupBlueNavigationBar()
-        setupMenuBarButton()
+        setupBackBarButton()
     }
     
     private func setupView() {
@@ -41,6 +50,7 @@ class ProfileViewController: UIViewController {
     }
     
     private func setupBlueNavigationBar() {
+        
         navigationController?.navigationBar.barTintColor = Colors.blue
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -51,7 +61,18 @@ class ProfileViewController: UIViewController {
         imageView.contentMode = .scaleAspectFit
         imageView.image = image
         navigationItem.titleView = imageView
-
+    }
+    private func setupBackBarButton() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "backButton"),
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(goBack))
+    }
+    
+    @objc private func goBack() {
+        let vc = viewControllerWith(identifier: "MainViewController", storyboard: "Main")
+        let nvc = UINavigationController(rootViewController: vc)
+        present(nvc, animated: true, completion: nil)
     }
 }
 

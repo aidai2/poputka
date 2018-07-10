@@ -166,7 +166,16 @@
                     <view key="view" contentMode="scaleToFill" id="PBB-US-pO0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L5E-uJ-tvx">
+                                <rect key="frame" x="163" y="318" width="51" height="31"/>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L5E-uJ-tvx" firstAttribute="centerX" secondItem="PBB-US-pO0" secondAttribute="centerX" id="Wsv-zS-qAd"/>
+                            <constraint firstItem="L5E-uJ-tvx" firstAttribute="centerY" secondItem="PBB-US-pO0" secondAttribute="centerY" id="jcr-xh-bU3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AF9-7B-cgt"/>
                     </view>
                 </viewController>
