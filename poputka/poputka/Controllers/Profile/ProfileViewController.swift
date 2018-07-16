@@ -63,7 +63,7 @@ class ProfileViewController: UIViewController {
         navigationItem.titleView = imageView
     }
     private func setupBackBarButton() {
-        navigationItem.backBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "backButton"),
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "backButton"),
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(goBack))
@@ -71,8 +71,8 @@ class ProfileViewController: UIViewController {
     
     @objc private func goBack() {
         let vc = viewControllerWith(identifier: "MainViewController", storyboard: "Main")
-        let nvc = UINavigationController(rootViewController: vc)
-        present(nvc, animated: true, completion: nil)
+        so_containerViewController?.topViewController = UINavigationController(rootViewController: vc)
+        so_containerViewController?.isSideViewControllerPresented = false
     }
 }
 
