@@ -9,11 +9,15 @@
 import UIKit
 class MenuViewController: UIViewController {
     
-    
     @IBOutlet weak var menuTableView: UITableView!
+    
+    private var cities: [City] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Delete this shit
+        setupCities()
         
         menuTableView.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
     }
@@ -21,6 +25,12 @@ class MenuViewController: UIViewController {
     @IBAction func profileButton(_ sender: Any) {
         let vc = viewControllerWith(identifier: "ProfileViewController", storyboard: "Profile")
         present(vc, animated: true, completion: nil)
+    }
+    
+    private func setupCities() {
+        ServerManager.shared.getCities({ (allCities) in
+            self.cities = allCities
+        }, error: showErrorAlert)
     }
 }
 
@@ -34,7 +44,8 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
         if section == 0 {
             return 1
         }
-        return SideMenu.menu.count
+//        return SideMenu.menu.count
+        return cities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,8 +59,8 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as! MenuTableViewCell
             cell.backgroundColor = UIColor.clear
-            cell.menuLabel.text = SideMenu.menu[indexPath.row].title
-            
+//            cell.menuLabel.text = SideMenu.menu[indexPath.row].title
+            cell.menuLabel.text = cities[indexPath.row].name
             return cell
         }
     }

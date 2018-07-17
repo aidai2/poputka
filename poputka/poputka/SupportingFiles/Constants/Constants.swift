@@ -35,7 +35,35 @@ struct SideMenu {
 
 }
 
+struct Font {
+    static let robotoRegular = "Roboto-Regular"
+    static let robotoMedium  = "Roboto-Medium"
+}
+
 struct ProfileInfo {
     
     static let list = ["Имя", "Номер телефона", "Город"]
 }
+
+struct GuidePages {
+    
+    struct Guide {
+        var image: UIImage
+        var shadow: UIImage
+        var description: String
+    }
+    
+    static let guides = [Guide(image: #imageLiteral(resourceName: "moneyIcon"), shadow: #imageLiteral(resourceName: "greenShadow"), description: "Cделайте каждую свою поездку выгодной!"),
+                         Guide(image: #imageLiteral(resourceName: "pathIcon"), shadow: #imageLiteral(resourceName: "blueShadow"), description: "Выберите лучший маршрут!"),
+                         Guide(image: #imageLiteral(resourceName: "smilesIcon"), shadow: #imageLiteral(resourceName: "yellowShadow"), description: "Находите себе приятных попутчиков!")]
+}
+
+
+
+
+
+
+
+
+
+

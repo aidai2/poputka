@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyCcWt-XHPIQlnTtoa4zwQkxLNzp70vvL94")
         GMSPlacesClient.provideAPIKey("AIzaSyCcWt-XHPIQlnTtoa4zwQkxLNzp70vvL94")
         IQKeyboardManager.shared().isEnabled = true
+        
+        showViewController()
+        
         return true
     }
 
@@ -44,6 +47,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    private func showViewController() {
+        if DataManager.shared.isUsedGuides() {
+            let sb = UIStoryboard(name: "Login", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "LoginViewController")
+            window?.rootViewController = vc
+        } else {
+            let sb = UIStoryboard(name: "Guide", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "GuideViewController")
+            window?.rootViewController = vc
+        }
     }
 }
 

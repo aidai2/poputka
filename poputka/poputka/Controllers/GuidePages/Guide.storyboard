@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qcB-xn-f78">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Guide View Controller-->
+        <scene sceneID="Zr2-Ra-mJn">
+            <objects>
+                <viewController id="qcB-xn-f78" customClass="GuideViewController" customModule="poputka" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cwk-cN-hEe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="553-bN-qOP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="529"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ixc-uD-1u7">
+                                    <size key="itemSize" width="355" height="614"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collCell" id="zdc-Xf-0Xf" customClass="GuidePagesCell" customModule="poputka" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-42.5" width="355" height="614"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="614"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kcW-pU-PGH">
+                                                    <rect key="frame" x="27" y="98" width="300" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="SVO-Eh-2ZR"/>
+                                                        <constraint firstAttribute="width" constant="300" id="caH-ef-7EL"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fu3-st-HZK">
+                                                    <rect key="frame" x="85" y="248" width="184" height="7"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="7" id="c7h-9z-8wh"/>
+                                                        <constraint firstAttribute="width" constant="184" id="vSV-3D-eF5"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDO-ev-Xht">
+                                                    <rect key="frame" x="53" y="295" width="249" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="kcW-pU-PGH" firstAttribute="centerX" secondItem="zdc-Xf-0Xf" secondAttribute="centerX" id="0NZ-76-jBS"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="aDO-ev-Xht" secondAttribute="trailing" constant="45" id="9RE-Ft-g9J"/>
+                                            <constraint firstItem="Fu3-st-HZK" firstAttribute="centerX" secondItem="zdc-Xf-0Xf" secondAttribute="centerX" id="BDa-8x-wVx"/>
+                                            <constraint firstItem="Fu3-st-HZK" firstAttribute="top" secondItem="kcW-pU-PGH" secondAttribute="bottom" constant="50" id="X1A-Qk-T3L"/>
+                                            <constraint firstItem="aDO-ev-Xht" firstAttribute="leading" secondItem="zdc-Xf-0Xf" secondAttribute="leadingMargin" constant="45" id="YdX-Wu-PLl"/>
+                                            <constraint firstItem="aDO-ev-Xht" firstAttribute="centerX" secondItem="zdc-Xf-0Xf" secondAttribute="centerX" id="lJo-6O-WLe"/>
+                                            <constraint firstItem="kcW-pU-PGH" firstAttribute="top" secondItem="zdc-Xf-0Xf" secondAttribute="topMargin" constant="90" id="yxh-oM-cMg"/>
+                                            <constraint firstItem="aDO-ev-Xht" firstAttribute="top" secondItem="Fu3-st-HZK" secondAttribute="bottom" constant="40" id="z3F-AQ-2oN"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="aDO-ev-Xht" id="yb3-sA-puZ"/>
+                                            <outlet property="shadowImage" destination="Fu3-st-HZK" id="FRg-jG-Fmv"/>
+                                            <outlet property="welcomeIcon" destination="kcW-pU-PGH" id="6Sz-et-rW9"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="qcB-xn-f78" id="c2p-Qf-0du"/>
+                                    <outlet property="delegate" destination="qcB-xn-f78" id="6eM-as-xAP"/>
+                                </connections>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="1fc-mI-OvA">
+                                <rect key="frame" x="168" y="610" width="39" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-sb-qA6" customClass="BlueButton" customModule="poputka" customModuleProvider="target">
+                                <rect key="frame" x="45" y="557" width="285" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="CpY-YR-1vk"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goNextButtonClicked:" destination="qcB-xn-f78" eventType="touchUpInside" id="2JQ-N1-GbH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fDb-EV-kQf" firstAttribute="trailing" secondItem="553-bN-qOP" secondAttribute="trailing" id="JFF-dA-5ep"/>
+                            <constraint firstItem="1fc-mI-OvA" firstAttribute="centerX" secondItem="cwk-cN-hEe" secondAttribute="centerX" id="MJG-tN-7IX"/>
+                            <constraint firstItem="Me0-sb-qA6" firstAttribute="top" secondItem="553-bN-qOP" secondAttribute="bottom" constant="8" id="QRW-wA-LaP"/>
+                            <constraint firstItem="553-bN-qOP" firstAttribute="leading" secondItem="fDb-EV-kQf" secondAttribute="leading" id="R39-ek-vSn"/>
+                            <constraint firstItem="1fc-mI-OvA" firstAttribute="top" secondItem="Me0-sb-qA6" secondAttribute="bottom" constant="8" id="Uvo-VA-HIK"/>
+                            <constraint firstItem="fDb-EV-kQf" firstAttribute="bottom" secondItem="1fc-mI-OvA" secondAttribute="bottom" constant="20" id="XiZ-lB-7ON"/>
+                            <constraint firstItem="Me0-sb-qA6" firstAttribute="leading" secondItem="fDb-EV-kQf" secondAttribute="leading" constant="45" id="egs-0v-Kge"/>
+                            <constraint firstItem="fDb-EV-kQf" firstAttribute="trailing" secondItem="Me0-sb-qA6" secondAttribute="trailing" constant="45" id="iFL-jR-TIU"/>
+                            <constraint firstItem="553-bN-qOP" firstAttribute="top" secondItem="cwk-cN-hEe" secondAttribute="topMargin" id="oTe-rF-VxN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fDb-EV-kQf"/>
+                    </view>
+                    <connections>
+                        <outlet property="goNextButton" destination="Me0-sb-qA6" id="WJJ-4d-CMo"/>
+                        <outlet property="guideCollectionView" destination="553-bN-qOP" id="0RT-Xf-EKo"/>
+                        <outlet property="guidePageControl" destination="1fc-mI-OvA" id="3l2-1l-FBk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zM4-8l-58U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458.39999999999998" y="14.842578710644679"/>
+        </scene>
+    </scenes>
+</document>
