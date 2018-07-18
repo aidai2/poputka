@@ -18,6 +18,8 @@ struct Colors {
     static let segmentedDarkBlue = UIColor.init(netHex: 0x153F91)
     static let segmentedLightBlue = UIColor.init(netHex: 0x4A86FC)
     static let ratingNumberColor = UIColor.init(netHex: 0x2968E2)
+    static let cityNameColor = UIColor.init(netHex: 0x707070)
+    
     static let shadowGray = UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.15)
    // static let formColor = UIColor.init(red: 21.0, green: 104.0, blue: 226.0, alpha: 1.0 )    
 }

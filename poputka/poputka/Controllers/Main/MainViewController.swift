@@ -53,8 +53,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     
     @objc private func formButtonClicked() {
         setupJelly()
-        
     }
+    
     private func setupRightBarButton() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "profile"),
                                                             style: .plain,

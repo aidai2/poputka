@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Jelly
 
 class RegistrationViewController: UIViewController {
-
+    
     @IBOutlet weak var confidentialButton: UIButton!
     @IBOutlet weak var segmentedControl: HBSegmentedControl!
+    @IBOutlet weak var cityNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +22,35 @@ class RegistrationViewController: UIViewController {
         confidentialButton.underline()
     }
     
+    @IBAction func choseCityButton(_ sender: Any) {
+        setupJelly()
+    }
+
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
- 
+    
+    
+    private func setupJelly() {
+        var jellyAnimator: JellyAnimator?
+        let customCornerSlideInPresentation = JellySlideInPresentation(cornerRadius: 10,
+                                                                       backgroundStyle: .dimmed(alpha: 0.3),
+                                                                       jellyness: .jellier,
+                                                                       duration: .slow,
+                                                                       directionShow: .bottom,
+                                                                       directionDismiss: .right,
+                                                                       widthForViewController: .custom(value: view.frame.size.width - 64),
+                                                                       heightForViewController: .custom(value: view.frame.size.height-300))
+        
+        let vc = viewControllerWith(identifier: "CityViewController", storyboard: "Registration")
+        jellyAnimator = JellyAnimator(presentation: customCornerSlideInPresentation)
+        jellyAnimator?.prepare(viewController: vc)
+        present(vc, animated: true, completion: nil)
+    }
+    
     private func setupSegmentedControl() {
         segmentedControl.items = ["Водитель", "Пешеход"]
         segmentedControl.borderColor = .clear

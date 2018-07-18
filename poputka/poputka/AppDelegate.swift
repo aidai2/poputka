@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func showViewController() {
         if DataManager.shared.isUsedGuides() {
             let sb = UIStoryboard(name: "Login", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: "LoginViewController")
+            let vc = sb.instantiateViewController(withIdentifier: "LoginNav")
             window?.rootViewController = vc
         } else {
             let sb = UIStoryboard(name: "Guide", bundle: nil)

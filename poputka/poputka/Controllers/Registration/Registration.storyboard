@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -82,7 +83,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EE9-iG-XzY" customClass="PageTitleLabel" customModule="poputka" customModuleProvider="target">
-                                <rect key="frame" x="115" y="183.5" width="145" height="28"/>
+                                <rect key="frame" x="115.5" y="183.5" width="145" height="28"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                 <color key="textColor" red="0.32156862745098036" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -97,12 +98,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6E-jh-pLK" customClass="BlueView" customModule="poputka" customModuleProvider="target">
                                 <rect key="frame" x="32" y="424.5" width="311" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Город" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxb-US-duY">
-                                        <rect key="frame" x="16" y="16" width="243" height="19"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E00-CG-vpd">
                                         <rect key="frame" x="267" y="6" width="38" height="38"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -111,14 +106,23 @@
                                             <constraint firstAttribute="height" constant="38" id="aYf-b0-Dqw"/>
                                         </constraints>
                                         <state key="normal" image="cityList"/>
+                                        <connections>
+                                            <action selector="choseCityButton:" destination="UZN-y6-UIg" eventType="touchUpInside" id="zv2-nj-20A"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Город" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJM-r5-vIJ">
+                                        <rect key="frame" x="16" y="15" width="243" height="19"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="16"/>
+                                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="cxb-US-duY" firstAttribute="centerY" secondItem="W6E-jh-pLK" secondAttribute="centerY" id="Dp7-HL-bKl"/>
+                                    <constraint firstItem="NJM-r5-vIJ" firstAttribute="centerY" secondItem="W6E-jh-pLK" secondAttribute="centerY" id="Cxq-I8-qFB"/>
+                                    <constraint firstItem="E00-CG-vpd" firstAttribute="leading" secondItem="NJM-r5-vIJ" secondAttribute="trailing" constant="8" id="NK4-Vb-oUp"/>
                                     <constraint firstItem="E00-CG-vpd" firstAttribute="centerY" secondItem="W6E-jh-pLK" secondAttribute="centerY" id="Prw-Ox-84d"/>
                                     <constraint firstAttribute="trailing" secondItem="E00-CG-vpd" secondAttribute="trailing" constant="6" id="ww9-sf-GjL"/>
-                                    <constraint firstItem="E00-CG-vpd" firstAttribute="leading" secondItem="cxb-US-duY" secondAttribute="trailing" constant="8" id="xYN-cR-qFw"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -133,13 +137,13 @@
                             <constraint firstItem="ItJ-yI-TEc" firstAttribute="height" secondItem="eGF-R2-ld7" secondAttribute="height" id="IqI-e4-ahA"/>
                             <constraint firstItem="hP3-Mr-MRD" firstAttribute="top" secondItem="W6E-jh-pLK" secondAttribute="bottom" constant="8" id="Jli-6a-lDj"/>
                             <constraint firstItem="W6E-jh-pLK" firstAttribute="height" secondItem="ItJ-yI-TEc" secondAttribute="height" id="Ka0-kv-KP4"/>
-                            <constraint firstItem="cxb-US-duY" firstAttribute="leading" secondItem="GR2-OH-UVK" secondAttribute="leading" id="Lzz-Db-894"/>
                             <constraint firstItem="ItJ-yI-TEc" firstAttribute="top" secondItem="eGF-R2-ld7" secondAttribute="bottom" constant="8" id="Mft-KT-1Ua"/>
                             <constraint firstItem="EE9-iG-XzY" firstAttribute="top" secondItem="Gzm-Tc-cDF" secondAttribute="bottom" constant="25" id="NOL-vg-AuQ"/>
                             <constraint firstItem="QCY-SE-wae" firstAttribute="trailing" secondItem="DQu-3W-8gY" secondAttribute="trailing" constant="45" id="PwK-It-4Rh"/>
                             <constraint firstItem="W6E-jh-pLK" firstAttribute="trailing" secondItem="ItJ-yI-TEc" secondAttribute="trailing" id="QYk-un-ChO"/>
                             <constraint firstItem="DQu-3W-8gY" firstAttribute="leading" secondItem="QCY-SE-wae" secondAttribute="leading" constant="45" id="RXZ-gZ-NhZ"/>
                             <constraint firstItem="REn-ST-CzM" firstAttribute="trailing" secondItem="GR2-OH-UVK" secondAttribute="trailing" id="ZZd-9m-BE6"/>
+                            <constraint firstItem="NJM-r5-vIJ" firstAttribute="leading" secondItem="REn-ST-CzM" secondAttribute="leading" id="fzq-bB-iwt"/>
                             <constraint firstItem="REn-ST-CzM" firstAttribute="leading" secondItem="GR2-OH-UVK" secondAttribute="leading" id="i1X-Gx-nYk"/>
                             <constraint firstItem="ItJ-yI-TEc" firstAttribute="trailing" secondItem="eGF-R2-ld7" secondAttribute="trailing" id="ire-dc-6mn"/>
                             <constraint firstItem="W6E-jh-pLK" firstAttribute="leading" secondItem="ItJ-yI-TEc" secondAttribute="leading" id="nEM-1Z-Utk"/>
@@ -154,6 +158,7 @@
                         <viewLayoutGuide key="safeArea" id="QCY-SE-wae"/>
                     </view>
                     <connections>
+                        <outlet property="cityNameLabel" destination="NJM-r5-vIJ" id="qzb-Kl-4Z8"/>
                         <outlet property="confidentialButton" destination="hP3-Mr-MRD" id="xkQ-cX-ssY"/>
                         <outlet property="segmentedControl" destination="QFM-Ha-8X8" id="yNj-Xi-rXQ"/>
                     </connections>
@@ -161,6 +166,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dx2-do-URx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="399.19999999999999" y="280.20989505247377"/>
+        </scene>
+        <!--City View Controller-->
+        <scene sceneID="f64-ys-ab6">
+            <objects>
+                <viewController storyboardIdentifier="CityViewController" id="bxh-qJ-2SP" customClass="CityViewController" customModule="poputka" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JEz-W9-rGy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bhH-yq-w23">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cityCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChoseCityCell" id="yCE-lK-4q3" customClass="ChoseCityCell" customModule="poputka" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yCE-lK-4q3" id="ydQ-wA-Th4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUE-u1-Q5A">
+                                                    <rect key="frame" x="15" y="11" width="335" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eUE-u1-Q5A" secondAttribute="trailing" constant="10" id="dK8-pO-02o"/>
+                                                <constraint firstItem="eUE-u1-Q5A" firstAttribute="leading" secondItem="ydQ-wA-Th4" secondAttribute="leadingMargin" id="nWg-XL-HQO"/>
+                                                <constraint firstItem="eUE-u1-Q5A" firstAttribute="top" secondItem="ydQ-wA-Th4" secondAttribute="topMargin" id="p3i-Gk-3Dr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="cityNameLabel" destination="eUE-u1-Q5A" id="owa-KX-VfK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bxh-qJ-2SP" id="HPi-OR-ibW"/>
+                                    <outlet property="delegate" destination="bxh-qJ-2SP" id="j04-r6-mVA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bhH-yq-w23" firstAttribute="leading" secondItem="ERN-o5-WI8" secondAttribute="leading" id="J8C-wz-6qX"/>
+                            <constraint firstItem="ERN-o5-WI8" firstAttribute="trailing" secondItem="bhH-yq-w23" secondAttribute="trailing" id="SyA-iO-xZH"/>
+                            <constraint firstItem="ERN-o5-WI8" firstAttribute="bottom" secondItem="bhH-yq-w23" secondAttribute="bottom" id="kMG-xh-e8b"/>
+                            <constraint firstItem="bhH-yq-w23" firstAttribute="top" secondItem="JEz-W9-rGy" secondAttribute="top" id="p3O-KP-tRr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ERN-o5-WI8"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityTableView" destination="bhH-yq-w23" id="0Ws-lW-EZo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U1I-yM-ZAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="280"/>
         </scene>
     </scenes>
     <resources>
