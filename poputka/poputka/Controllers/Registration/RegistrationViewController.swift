@@ -52,7 +52,7 @@ class RegistrationViewController: UIViewController {
     }
     
     private func setupSegmentedControl() {
-        segmentedControl.items = ["Водитель", "Пешеход"]
+        segmentedControl.items = ["На коне", "Без коня"]
         segmentedControl.borderColor = .clear
         segmentedControl.selectedLabelColor = UIColor.white
         segmentedControl.unselectedLabelColor = UIColor.white
