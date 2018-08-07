@@ -34,8 +34,10 @@
 		8437019820E10B9500910A1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8437019620E10B9500910A1D /* LaunchScreen.storyboard */; };
 		843701A320E10B9500910A1D /* poputkaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843701A220E10B9500910A1D /* poputkaTests.swift */; };
 		843701AE20E10B9500910A1D /* poputkaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843701AD20E10B9500910A1D /* poputkaUITests.swift */; };
-		8448C4B720FF420C005709BA /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448C4B620FF420C005709BA /* CityViewController.swift */; };
 		8448C4B920FF4469005709BA /* ChoseCityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448C4B820FF4469005709BA /* ChoseCityCell.swift */; };
+		8498A0AE211966A9000DF140 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498A0AD211966A9000DF140 /* SettingViewController.swift */; };
+		8498A0B021196AC4000DF140 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498A0AF21196AC4000DF140 /* SettingTableViewCell.swift */; };
+		8498A0B221197302000DF140 /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498A0B121197302000DF140 /* NewUser.swift */; };
 		84AC902120EA1F7400D65752 /* PageTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC902020EA1F7400D65752 /* PageTitleLabel.swift */; };
 		84AC902820EA4FAB00D65752 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC902720EA4FAB00D65752 /* MenuTableViewCell.swift */; };
 		84EB7C9420FDD27100D4FC4D /* HTTPRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB7C9320FDD27100D4FC4D /* HTTPRequestManager.swift */; };
@@ -110,8 +112,10 @@
 		843701A920E10B9500910A1D /* poputkaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = poputkaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		843701AD20E10B9500910A1D /* poputkaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poputkaUITests.swift; sourceTree = "<group>"; };
 		843701AF20E10B9500910A1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8448C4B620FF420C005709BA /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		8448C4B820FF4469005709BA /* ChoseCityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoseCityCell.swift; sourceTree = "<group>"; };
+		8498A0AD211966A9000DF140 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		8498A0AF21196AC4000DF140 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		8498A0B121197302000DF140 /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
 		84AC902020EA1F7400D65752 /* PageTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleLabel.swift; sourceTree = "<group>"; };
 		84AC902720EA4FAB00D65752 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		84EB7C9320FDD27100D4FC4D /* HTTPRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestManager.swift; sourceTree = "<group>"; };
@@ -186,7 +190,6 @@
 			children = (
 				84135B0C20E62AFF001F6531 /* Registration.storyboard */,
 				84135B1C20E62F7B001F6531 /* RegistrationViewController.swift */,
-				8448C4B620FF420C005709BA /* CityViewController.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				84F486A220EB578D0005C153 /* MainViewController.swift */,
 				84F486A420EB58000005C153 /* MenuViewController.swift */,
 				840596B020F3948A00E54DD2 /* FormViewController.swift */,
+				8498A0AD211966A9000DF140 /* SettingViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -336,6 +340,7 @@
 				840596AE20F3811F00E54DD2 /* ProfileViewCell.swift */,
 				84EB7CA320FDEC1400D4FC4D /* GuidePagesCell.swift */,
 				8448C4B820FF4469005709BA /* ChoseCityCell.swift */,
+				8498A0AF21196AC4000DF140 /* SettingTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -345,6 +350,7 @@
 			children = (
 				84EB7C9820FDD38A00D4FC4D /* ErrorMessage.swift */,
 				84EB7C9C20FDD56700D4FC4D /* City.swift */,
+				8498A0B121197302000DF140 /* NewUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -638,6 +644,7 @@
 				84EB7C9620FDD32300D4FC4D /* HTTPStatusCode.swift in Sources */,
 				84EB7C9920FDD38A00D4FC4D /* ErrorMessage.swift in Sources */,
 				84AC902820EA4FAB00D65752 /* MenuTableViewCell.swift in Sources */,
+				8498A0B021196AC4000DF140 /* SettingTableViewCell.swift in Sources */,
 				84F486A120EB56BF0005C153 /* SidebarOverlay.swift in Sources */,
 				84EB7C9B20FDD4B800D4FC4D /* ServerManager.swift in Sources */,
 				84EB7CA420FDEC1400D4FC4D /* GuidePagesCell.swift in Sources */,
@@ -647,10 +654,11 @@
 				84EB7C9420FDD27100D4FC4D /* HTTPRequestManager.swift in Sources */,
 				84EB7C9D20FDD56700D4FC4D /* City.swift in Sources */,
 				84FF052F20EE300800407A9D /* ProfileViewController.swift in Sources */,
+				8498A0B221197302000DF140 /* NewUser.swift in Sources */,
 				84EB7CA020FDDEA600D4FC4D /* GuideViewController.swift in Sources */,
-				8448C4B720FF420C005709BA /* CityViewController.swift in Sources */,
 				840596B120F3948A00E54DD2 /* FormViewController.swift in Sources */,
 				84135B2120E63104001F6531 /* BlueView.swift in Sources */,
+				8498A0AE211966A9000DF140 /* SettingViewController.swift in Sources */,
 				84135B2620E63303001F6531 /* Constants.swift in Sources */,
 				84135B1720E62F33001F6531 /* RecoveryPhoneViewController.swift in Sources */,
 				8448C4B920FF4469005709BA /* ChoseCityCell.swift in Sources */,

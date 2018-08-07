@@ -25,9 +25,10 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         setupRightBarButton()
         setupGoogleMap()
         setupFormButton()
+        setupSettingButton()
     }
 
-    private func setupJelly() {
+    private func setupJellyForm() {
         var jellyAnimator: JellyAnimator?
         let customCornerSlideInPresentation = JellySlideInPresentation(cornerRadius: 23,
                                                                        backgroundStyle: .dimmed(alpha: 0.3),
@@ -44,15 +45,32 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         present(vc, animated: true, completion: nil)
     }
     
+    private func seetupJellySetting() {
+        var jellyAnimator: JellyAnimator?
+        let customCornerSlideInPresentation = JellySlideInPresentation(cornerRadius: 23,
+                                                                       backgroundStyle: .dimmed(alpha: 0.3),
+                                                                       jellyness: .jelly,
+                                                                       duration: .medium,
+                                                                       directionShow: .bottom,
+                                                                       directionDismiss: .right,
+                                                                       widthForViewController: .custom(value: view.frame.size.width - 130),
+                                                                       heightForViewController: .custom(value: view.frame.size.height-400))
+        
+        let vc = viewControllerWith(identifier: "SettingViewController", storyboard: "Main")
+        jellyAnimator = JellyAnimator(presentation: customCornerSlideInPresentation)
+        jellyAnimator?.prepare(viewController: vc)
+        present(vc, animated: true, completion: nil)
+    }
+    
     private func setupFormButton() {
-        button = UIButton(frame: CGRect(x: view.frame.midX - 30, y: view.frame.size.height - 80, width: 60, height: 60))
+        button = UIButton(frame: CGRect(x: view.frame.midX + 100, y: view.frame.size.height - 80, width: 60, height: 60))
         button.addTarget(self, action: #selector(formButtonClicked), for: .touchUpInside)
         button.setImage(#imageLiteral(resourceName: "formeButton"), for: .normal)
         view.addSubview(button)
     }
     
     @objc private func formButtonClicked() {
-        setupJelly()
+        setupJellyForm()
     }
     
     private func setupRightBarButton() {
@@ -67,6 +85,17 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         let nvc = UINavigationController(rootViewController: vc)
         present(nvc, animated: true, completion: nil)
     }
+    
+    private func setupSettingButton() {
+        button = UIButton(frame: CGRect(x: view.frame.midX - 160, y: view.frame.size.height - 80, width: 60, height: 60))
+        button.addTarget(self, action: #selector(settingButtonClicked), for: .touchUpInside)
+        button.setImage(#imageLiteral(resourceName: "setting"), for: .normal)
+        view.addSubview(button)
+    }
+    @objc private func settingButtonClicked () {
+        seetupJellySetting()
+    }
+    
     
     private func setupImage() {
         let image: UIImage = UIImage(named: "blue_logo")!

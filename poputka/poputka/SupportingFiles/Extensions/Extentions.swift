@@ -83,6 +83,16 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
+    
+    func deleteBackBarTitle() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    func setupDismissButton() -> UIButton {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
+        button.backgroundColor = Colors.shadowGray
+        return button
+    }
 }
 
 

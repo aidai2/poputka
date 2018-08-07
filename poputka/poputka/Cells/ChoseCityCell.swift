@@ -11,15 +11,15 @@ import UIKit
 class ChoseCityCell: UITableViewCell {
 
     @IBOutlet weak var cityNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func setupCity(city: City) {
+        cityNameLabel.text = city.name
+        cityNameLabel.textColor = Colors.cityNameColor
+        cityNameLabel.font = UIFont(name: Font.robotoLight, size: 16)
     }
-
 }

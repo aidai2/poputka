@@ -28,7 +28,7 @@ class HTTPRequestManager {
         let APIaddress = "\(url)\(endpoint)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         
         var header: HTTPHeaders = [:]
-        header["Content-Type"] = "application/json"
+//        header["Content-Type"] = "application/json"
 //        header["Authorization"] = "Token 9d60577f3ca0beb937db6f54fccc54ba63b04164"
         
         Alamofire.request(APIaddress!, method: method, parameters: parameters, encoding: JSONEncoding.default , headers: header).responseJSON { (response:DataResponse<Any>) in
