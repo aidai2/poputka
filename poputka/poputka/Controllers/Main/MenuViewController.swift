@@ -12,10 +12,8 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var menuTableView: UITableView!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         menuTableView.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
     }
