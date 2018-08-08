@@ -11,23 +11,30 @@ import GoogleMaps
 import CoreLocation
 import Jelly
 
-class MainViewController: UIViewController, CLLocationManagerDelegate {
+class MainViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
     private var mapView = GMSMapView()
     private var button = UIButton()
     private var locationManager = CLLocationManager()
-    private let marker = GMSMarker()
+    private var marker = GMSMarker()
     private var currentUserAddress: String?
-
+    var currentLocation: CLLocation?
+    var routeView = UIView()
+    private var check: Bool?
+    
     override func viewDidLoad() {
         
+        check = true
         setupNavigationBar()
         setupImage()
         setupMenuBarButton()
         setupRightBarButton()
+        currentLocation = locationManager.location
+        let tapOnRouteView = UITapGestureRecognizer(target: self, action: #selector(self.handleTapOnRouteView(tapGestureRecognizer:)))
+        routeView.isUserInteractionEnabled = true
+        routeView.addGestureRecognizer(tapOnRouteView)
         
         locationManager.delegate = self
-        mapView.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
@@ -71,6 +78,27 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     }
     @objc private func settingButtonClicked () {
         seetupJellySetting()
+    }
+    
+    private func setupRouteView() {
+        let routeFrame = CGRect(x: view.frame.midX - 80, y: view.frame.size.height - 80, width: 160, height: 50)
+        routeView = UIView(frame: routeFrame)
+        routeView.layer.cornerRadius = 30
+        routeView.layer.borderWidth = 2
+        routeView.layer.borderColor = Colors.blue.cgColor
+        routeView.layer.backgroundColor = UIColor.white.cgColor
+        
+        let frame = CGRect(x: 16.0, y: 0.0, width: 160, height: 50)
+        let text = UITextField(frame: frame)
+        text.text = "Where to?"
+        text.textColor = Colors.blue
+        
+        routeView.addSubview(text)
+        view.addSubview(routeView)
+    }
+    
+    @objc func handleTapOnRouteView(tapGestureRecognizer: UITapGestureRecognizer) {
+        print("AMMMA TAPPED MAZAFAKA")
     }
     
     // jelly
@@ -132,14 +160,14 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         }
         
         //mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
-        var currentLocation: CLLocation?
-        currentLocation = locationManager.location
         
         let zoomLevel: Float = 16.1
         
         let camera = GMSCameraPosition.camera(withLatitude: (currentLocation?.coordinate.latitude)!, longitude: (currentLocation?.coordinate.longitude)!, zoom: zoomLevel)
-        mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
         
+        mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+        mapView.delegate = self
+        self.view = mapView
         do {
             if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
                 mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
@@ -154,43 +182,75 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         
         marker.position = CLLocationCoordinate2D(latitude: (currentLocation?.coordinate.latitude)!, longitude: (currentLocation?.coordinate.longitude)!)
         marker.title = "You are here"
-        marker.snippet = currentUserAddress ?? "Failed"
+        marker.snippet = currentUserAddress ?? "Krasauuuucheg"
         marker.map = mapView
         marker.icon = #imageLiteral(resourceName: "marker")
         
         locationManager.stopUpdatingLocation()
         
+        
         setupFormButton()
         setupSettingButton()
+        setupRouteView()
     }
     
-    //current address name
-    private func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D) {
-        
-        let geocoder = GMSGeocoder()
-        
-        geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
-            guard let address = response?.firstResult(), let lines = address.lines else {
-                return
-            }
-            
-            self.currentUserAddress = lines.joined(separator: "\n")
-//            self.addressLabel.text = lines.joined(separator: "\n")
-//            UIView.animate(withDuration: 0.25) {
-//                self.view.layoutIfNeeded()
-//            }
-            self.marker.title = "You are here"
-            self.marker.snippet = lines.joined(separator: "\n")
-        }
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        mapView.clear()
+        addMarker(coordinate: coordinate)
     }
+    
+    func addMarker(coordinate: CLLocationCoordinate2D) {
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        marker.title = "Initial point"
+        marker.snippet = ""
+        marker.map = mapView
+        marker.icon = #imageLiteral(resourceName: "marker")
+    }
+
+    
+    //current address name
+//    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+//        //marker.title = "Initial point"
+//
+//        //self.marker = marker
+//        mapView.selectedMarker = marker
+//        return true
+//    }
+//
+//    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+//        reverseGeocodeCoordinate(coordinate: position.target)
+//    }
+    
+//    private func reverseGeocodeCoordinate(coordinate: CLLocationCoordinate2D) {
+//
+//        let geocoder = GMSGeocoder()
+//        //var lines: String?
+//        //let coordinate = CLLocationCoordinate2D(latitude: tappedMarker.position.latitude, longitude: tappedMarker.position.longitude)
+//
+//        geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
+//            guard let address = response?.firstResult(), let lines = address.lines else {
+//                return
+//            }
+//
+//            //self.marker.title = "Initial point"
+//            self.marker.snippet = lines.joined(separator: "\n")
+//
+////            print("AKJSFOIAHFJAOISFJAMOIFJAMOFL \(lines1)")
+////            lines = lines1.joined(separator: "\n")
+////            return lines!
+//
+//        }
+//        //return lines!
+//    }
     
 }
 
-extension MainViewController: GMSMapViewDelegate {
-    
-    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
-        reverseGeocodeCoordinate(position.target)
-    }
-}
+//extension MainViewController: GMSMapViewDelegate {
+//
+//    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+//        reverseGeocodeCoordinate(position.target)
+//    }
+//}
 
 

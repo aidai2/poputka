@@ -22,8 +22,6 @@ class MenuViewController: UIViewController {
         let vc = viewControllerWith(identifier: "ProfileViewController", storyboard: "Profile")
         present(vc, animated: true, completion: nil)
     }
-    
-
 }
 
 extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
