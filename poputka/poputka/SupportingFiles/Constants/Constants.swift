@@ -33,9 +33,14 @@ struct SideMenu {
     }
     
     static let menu = [ViewControllers(title: "Карта", sb: "Main", vc: "MainViewController"),
-                       ViewControllers(title: "Карта", sb: "Main", vc: "MainViewController")]
+//                       ViewControllers(title: "Карта", sb: "Main", vc: "MainViewController")
+    ]
 }
 
+struct Setting {
+    
+    static let list = ["Всех", "Только водителей", "Только пассажиров", "Предложения системы"]
+}
 struct Font {
     static let robotoRegular = "Roboto-Regular"
     static let robotoMedium  = "Roboto-Medium"

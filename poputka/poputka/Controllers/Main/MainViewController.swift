@@ -100,7 +100,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
                                                                        directionShow: .bottom,
                                                                        directionDismiss: .right,
                                                                        widthForViewController: .custom(value: view.frame.size.width - 130),
-                                                                       heightForViewController: .custom(value: view.frame.size.height-400))
+                                                                       heightForViewController: .custom(value: view.frame.size.height-460))
         
         let vc = viewControllerWith(identifier: "SettingViewController", storyboard: "Main")
         jellyAnimator = JellyAnimator(presentation: customCornerSlideInPresentation)
