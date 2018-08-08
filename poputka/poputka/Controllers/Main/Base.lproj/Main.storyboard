@@ -168,13 +168,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L5E-uJ-tvx">
-                                <rect key="frame" x="163" y="318" width="51" height="31"/>
+                                <rect key="frame" x="163" y="120" width="51" height="31"/>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="L5E-uJ-tvx" firstAttribute="centerX" secondItem="PBB-US-pO0" secondAttribute="centerX" id="Wsv-zS-qAd"/>
-                            <constraint firstItem="L5E-uJ-tvx" firstAttribute="centerY" secondItem="PBB-US-pO0" secondAttribute="centerY" id="jcr-xh-bU3"/>
+                            <constraint firstItem="L5E-uJ-tvx" firstAttribute="top" secondItem="AF9-7B-cgt" secondAttribute="top" constant="100" id="aBL-P5-His"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AF9-7B-cgt"/>
                     </view>
@@ -191,7 +191,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EEK-53-MJc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EEK-53-MJc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -199,9 +199,26 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0E4-Md-7iH" id="R2B-1N-wrl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgA-5y-Jss">
+                                                    <rect key="frame" x="15" y="11" width="317" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DgA-5y-Jss" secondAttribute="trailing" constant="28" id="8ax-tJ-T6K"/>
+                                                <constraint firstItem="DgA-5y-Jss" firstAttribute="leading" secondItem="R2B-1N-wrl" secondAttribute="leadingMargin" id="b2n-qg-rk5"/>
+                                                <constraint firstItem="DgA-5y-Jss" firstAttribute="top" secondItem="R2B-1N-wrl" secondAttribute="topMargin" id="gd4-gX-MFX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DgA-5y-Jss" secondAttribute="bottom" constant="1" id="rPM-f1-zxQ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="settingLabel" destination="DgA-5y-Jss" id="0N1-vD-ggD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
