@@ -37,5 +37,16 @@ struct User: Decodable {
     var is_driver: Bool
     var photo: String?
     var city_id: Int
+    
+    func toDictionary() -> [String: Any] {
+        return ["user_id" : user_id,
+                "first_name" : first_name,
+                "last_name" : last_name,
+                "gender" : gender,
+                "birth_date" : birth_date,
+                "is_driver" : is_driver,
+                "photo" : photo ?? "",
+                "city_id" : city_id]
+    }
 }
 

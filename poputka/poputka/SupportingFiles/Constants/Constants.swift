@@ -68,6 +68,8 @@ struct GuidePages {
 struct EndPoints {
     static let cities  = "api/v1/cities/"
     static let newUser = "api/v1/users/create/"
+    static let login   = "api/v1/users/login/"
+    static let route = "api/v1/routes/"
 }
 
 

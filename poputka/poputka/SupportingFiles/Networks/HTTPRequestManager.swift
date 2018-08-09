@@ -18,7 +18,7 @@ class HTTPRequestManager {
 
     private let url = "http://165.227.147.84:3333/"
     
-    private func request(method: HTTPMethod, endpoint: String, parameters: Parameter, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
+    private func request(method: HTTPMethod, endpoint: String, headers: Parameter, parameters: Parameter, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
         
         if !isConnectedToNetwork() {
             error("Нет подключения к интернету")
@@ -30,6 +30,10 @@ class HTTPRequestManager {
         var header: HTTPHeaders = [:]
 //        header["Content-Type"] = "application/json"
 //        header["Authorization"] = "Token 9d60577f3ca0beb937db6f54fccc54ba63b04164"
+        if (headers?.count == 1) {
+            header["Authorization"] = "Token \(headers!["Authorization"] ?? "")"
+        }
+        
         
         Alamofire.request(APIaddress!, method: method, parameters: parameters, encoding: JSONEncoding.default , headers: header).responseJSON { (response:DataResponse<Any>) in
             
@@ -56,11 +60,12 @@ class HTTPRequestManager {
                 completion(response.data)
                 break
             default:
+                
                 do {
                     guard let data = response.data else { return }
                     let errorMessage = try JSONDecoder().decode(ErrorMessage.self, from: data)
                     print(errorMessage)
-                    if let message = errorMessage.message {
+                    if let message = errorMessage.detail {
                         error(message)
                     }
                 } catch let err {
@@ -70,20 +75,20 @@ class HTTPRequestManager {
         }
     }
     
-    internal func post(api: String, parameters: Parameter, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
-        request(method: .post, endpoint: api, parameters: parameters, completion: completion, error: error)
+    internal func post(api: String, headers: Parameter, parameters: Parameter, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
+        request(method: .post, endpoint: api, headers: headers, parameters: parameters, completion: completion, error: error)
     }
     
-    internal func delete(api: String, parameters: Parameter, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
-        request(method: .delete, endpoint: api, parameters: parameters, completion: completion, error: error)
-    }
-    
-    internal func put(api: String, parameters: Parameter, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
-        request(method: .put, endpoint: api, parameters: parameters, completion: completion, error: error)
-    }
+//    internal func delete(api: String, parameters: Parameter, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
+//        request(method: .delete, endpoint: api, parameters: parameters, completion: completion, error: error)
+//    }
+//
+//    internal func put(api: String, parameters: Parameter, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
+//        request(method: .put, endpoint: api, parameters: parameters, completion: completion, error: error)
+//    }
     
     internal func get(api: String, completion: @escaping SuccessHandler, error: @escaping FailureHandler) {
-        request(method: .get, endpoint: api, parameters: nil, completion: completion, error: error)
+        request(method: .get, endpoint: api, headers: nil, parameters: nil, completion: completion, error: error)
     }
     
     private func isConnectedToNetwork() -> Bool {

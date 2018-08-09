@@ -9,5 +9,5 @@
 import Foundation
 
 struct ErrorMessage: Decodable {
-    var message: String?
+    var detail: String?
 }

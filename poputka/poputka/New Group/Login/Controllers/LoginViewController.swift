@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
         setupClearNavigationBar()
     }
     
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -31,7 +33,14 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func EnterButton(_ sender: UIButton) {
-        let vc = viewControllerWith(identifier: "SidebarOverlay", storyboard: "Main")
-        present(vc, animated: true, completion: nil)
+        let login = Login(phone: phoneTextField.text!, password: passwordTextField.text!)
+        ServerManager.shared.login(login: login, { (login) in
+            print(login.token)
+            let vc = self.viewControllerWith(identifier: "SidebarOverlay", storyboard: "Main")
+            self.present(vc, animated: true, completion: nil)
+        }, error: showErrorAlert)
     }
+    
+    //f25980fa937f5048855bd3d0f2e894300bcd2ca1
+    //f25980fa937f5048855bd3d0f2e894300bcd2ca1
 }

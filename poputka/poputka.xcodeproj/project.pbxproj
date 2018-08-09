@@ -28,6 +28,8 @@
 		84135B3720E64EEE001F6531 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84135B3220E64C66001F6531 /* Roboto-Bold.ttf */; };
 		84135B3820E64EF0001F6531 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84135B3120E64C66001F6531 /* Roboto-Medium.ttf */; };
 		84135B3920E64EF3001F6531 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84135B3020E64C65001F6531 /* Roboto-MediumItalic.ttf */; };
+		8425EF12211C3AC400EEB877 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425EF11211C3AC400EEB877 /* Login.swift */; };
+		8425EF14211C4A0100EEB877 /* CreateRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425EF13211C4A0100EEB877 /* CreateRoute.swift */; };
 		8437018E20E10B9500910A1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437018D20E10B9500910A1D /* AppDelegate.swift */; };
 		8437019320E10B9500910A1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8437019120E10B9500910A1D /* Main.storyboard */; };
 		8437019520E10B9500910A1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8437019420E10B9500910A1D /* Assets.xcassets */; };
@@ -106,6 +108,8 @@
 		84135B3320E64C73001F6531 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		84135B3420E64C84001F6531 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		8422C25820F4C6200067A909 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		8425EF11211C3AC400EEB877 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		8425EF13211C4A0100EEB877 /* CreateRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoute.swift; sourceTree = "<group>"; };
 		8437018A20E10B9500910A1D /* poputka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poputka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8437018D20E10B9500910A1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8437019220E10B9500910A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -193,7 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				84135B0920E62ADB001F6531 /* Login.storyboard */,
-				84135B1E20E62F8F001F6531 /* LoginViewController.swift */,
+				8425EF0E211C292A00EEB877 /* Controllers */,
 			);
 			name = Login;
 			path = "../New Group/Login";
@@ -203,7 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				84135B0C20E62AFF001F6531 /* Registration.storyboard */,
-				84135B1C20E62F7B001F6531 /* RegistrationViewController.swift */,
+				8425EF0D211C290F00EEB877 /* Cells */,
+				8425EF0C211C28F300EEB877 /* Controllers */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -212,9 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				84135B0F20E62B2A001F6531 /* Recovery.storyboard */,
-				84135B1620E62F33001F6531 /* RecoveryPhoneViewController.swift */,
-				84135B1820E62F52001F6531 /* RevoveryPasswordViewController.swift */,
-				84135B1A20E62F64001F6531 /* RecoveryViewController.swift */,
+				8425EF0B211C28CC00EEB877 /* Cells */,
+				8425EF0A211C28C100EEB877 /* Controllers */,
 			);
 			path = Recovery;
 			sourceTree = "<group>";
@@ -251,11 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				8437019120E10B9500910A1D /* Main.storyboard */,
-				84F486A020EB56BF0005C153 /* SidebarOverlay.swift */,
-				84F486A220EB578D0005C153 /* MainViewController.swift */,
-				84F486A420EB58000005C153 /* MenuViewController.swift */,
-				840596B020F3948A00E54DD2 /* FormViewController.swift */,
-				8498A0AD211966A9000DF140 /* SettingViewController.swift */,
+				8425EF09211C28A100EEB877 /* Cells */,
+				8425EF08211C289900EEB877 /* Controllers */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -292,6 +293,101 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		8425EF04211C283F00EEB877 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84EB7C9F20FDDEA600D4FC4D /* GuideViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8425EF05211C284500EEB877 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84EB7CA320FDEC1400D4FC4D /* GuidePagesCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8425EF06211C285F00EEB877 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84FF052E20EE300800407A9D /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8425EF07211C286E00EEB877 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84FF053020EE412400407A9D /* ProfileInfoCell.swift */,
+				840596AE20F3811F00E54DD2 /* ProfileViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8425EF08211C289900EEB877 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84F486A020EB56BF0005C153 /* SidebarOverlay.swift */,
+				84F486A220EB578D0005C153 /* MainViewController.swift */,
+				84F486A420EB58000005C153 /* MenuViewController.swift */,
+				840596B020F3948A00E54DD2 /* FormViewController.swift */,
+				8498A0AD211966A9000DF140 /* SettingViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8425EF09211C28A100EEB877 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84AC902720EA4FAB00D65752 /* MenuTableViewCell.swift */,
+				8498A0AF21196AC4000DF140 /* SettingTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8425EF0A211C28C100EEB877 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84135B1A20E62F64001F6531 /* RecoveryViewController.swift */,
+				84135B1820E62F52001F6531 /* RevoveryPasswordViewController.swift */,
+				84135B1620E62F33001F6531 /* RecoveryPhoneViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8425EF0B211C28CC00EEB877 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8425EF0C211C28F300EEB877 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84135B1C20E62F7B001F6531 /* RegistrationViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8425EF0D211C290F00EEB877 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8448C4B820FF4469005709BA /* ChoseCityCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8425EF0E211C292A00EEB877 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84135B1E20E62F8F001F6531 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		8437018120E10B9500910A1D = {
 			isa = PBXGroup;
 			children = (
@@ -318,7 +414,6 @@
 			isa = PBXGroup;
 			children = (
 				84135B1120E62B47001F6531 /* SupportingFiles */,
-				84AC902620EA4F8300D65752 /* Cells */,
 				84135B1220E62DC8001F6531 /* Controllers */,
 				8437018D20E10B9500910A1D /* AppDelegate.swift */,
 				8437019420E10B9500910A1D /* Assets.xcassets */,
@@ -346,25 +441,14 @@
 			path = poputkaUITests;
 			sourceTree = "<group>";
 		};
-		84AC902620EA4F8300D65752 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				84AC902720EA4FAB00D65752 /* MenuTableViewCell.swift */,
-				84FF053020EE412400407A9D /* ProfileInfoCell.swift */,
-				840596AE20F3811F00E54DD2 /* ProfileViewCell.swift */,
-				84EB7CA320FDEC1400D4FC4D /* GuidePagesCell.swift */,
-				8448C4B820FF4469005709BA /* ChoseCityCell.swift */,
-				8498A0AF21196AC4000DF140 /* SettingTableViewCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
 		84EB7C9720FDD38000D4FC4D /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				84EB7C9820FDD38A00D4FC4D /* ErrorMessage.swift */,
 				84EB7C9C20FDD56700D4FC4D /* City.swift */,
 				8498A0B121197302000DF140 /* NewUser.swift */,
+				8425EF11211C3AC400EEB877 /* Login.swift */,
+				8425EF13211C4A0100EEB877 /* CreateRoute.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -372,8 +456,9 @@
 		84EB7C9E20FDDE6000D4FC4D /* GuidePages */ = {
 			isa = PBXGroup;
 			children = (
-				84EB7C9F20FDDEA600D4FC4D /* GuideViewController.swift */,
 				84EB7CA120FDDEB500D4FC4D /* Guide.storyboard */,
+				8425EF05211C284500EEB877 /* Cells */,
+				8425EF04211C283F00EEB877 /* Controllers */,
 			);
 			path = GuidePages;
 			sourceTree = "<group>";
@@ -418,7 +503,8 @@
 			isa = PBXGroup;
 			children = (
 				84FF052C20EE2FEC00407A9D /* Profile.storyboard */,
-				84FF052E20EE300800407A9D /* ProfileViewController.swift */,
+				8425EF07211C286E00EEB877 /* Cells */,
+				8425EF06211C285F00EEB877 /* Controllers */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -697,6 +783,7 @@
 				84EB7C9920FDD38A00D4FC4D /* ErrorMessage.swift in Sources */,
 				84AC902820EA4FAB00D65752 /* MenuTableViewCell.swift in Sources */,
 				8498A0B021196AC4000DF140 /* SettingTableViewCell.swift in Sources */,
+				8425EF14211C4A0100EEB877 /* CreateRoute.swift in Sources */,
 				84F486A120EB56BF0005C153 /* SidebarOverlay.swift in Sources */,
 				84EB7C9B20FDD4B800D4FC4D /* ServerManager.swift in Sources */,
 				84EB7CA420FDEC1400D4FC4D /* GuidePagesCell.swift in Sources */,
@@ -707,6 +794,7 @@
 				84EB7C9D20FDD56700D4FC4D /* City.swift in Sources */,
 				84FF052F20EE300800407A9D /* ProfileViewController.swift in Sources */,
 				8498A0B221197302000DF140 /* NewUser.swift in Sources */,
+				8425EF12211C3AC400EEB877 /* Login.swift in Sources */,
 				84EB7CA020FDDEA600D4FC4D /* GuideViewController.swift in Sources */,
 				840596B120F3948A00E54DD2 /* FormViewController.swift in Sources */,
 				84135B2120E63104001F6531 /* BlueView.swift in Sources */,

@@ -30,10 +30,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         setupMenuBarButton()
         setupRightBarButton()
         currentLocation = locationManager.location
-        let tapOnRouteView = UITapGestureRecognizer(target: self, action: #selector(self.handleTapOnRouteView(tapGestureRecognizer:)))
-        routeView.isUserInteractionEnabled = true
-        routeView.addGestureRecognizer(tapOnRouteView)
         
+
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -77,7 +75,14 @@ class MainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         view.addSubview(button)
     }
     @objc private func settingButtonClicked () {
-        seetupJellySetting()
+        let route = CreateRoute(description: "", available_seats: 2, isDriver: true, isBag: true, isLocal: true, start_address: "adad", end_address: "ADad", start_latitude: String(describing: currentLocation?.coordinate.latitude), start_longitude: String(describing: currentLocation?.coordinate.longitude), end_latitude: String(marker.position.latitude), end_longitude: String(marker.position.longitude), start_time: 1000000000, points: [])
+        ServerManager.shared.route(route: route, { (route) in
+            print("gegegei")
+        }, error: showErrorAlert)
+        //seetupJellySetting()
+    }
+    
+    private func routeSetted() {
     }
     
     private func setupRouteView() {
@@ -87,17 +92,19 @@ class MainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         routeView.layer.borderWidth = 2
         routeView.layer.borderColor = Colors.blue.cgColor
         routeView.layer.backgroundColor = UIColor.white.cgColor
+        routeView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapOnRouteView)))
+//        routeView.isUserInteractionEnabled = true
         
-        let frame = CGRect(x: 16.0, y: 0.0, width: 160, height: 50)
-        let text = UITextField(frame: frame)
-        text.text = "Where to?"
-        text.textColor = Colors.blue
+//        let frame = CGRect(x: 16.0, y: 0.0, width: 160, height: 50)
+        // let text = UITextField(frame: frame)
+        //text.text = "Where to?"
+        //text.textColor = Colors.blue
         
-        routeView.addSubview(text)
-        view.addSubview(routeView)
+        //routeView.addSubview(text)
+//        view.addSubview(routeView)
     }
     
-    @objc func handleTapOnRouteView(tapGestureRecognizer: UITapGestureRecognizer) {
+    @objc func handleTapOnRouteView() {
         print("AMMMA TAPPED MAZAFAKA")
     }
     
@@ -179,12 +186,12 @@ class MainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         }
         
         self.view = mapView
-        
-        marker.position = CLLocationCoordinate2D(latitude: (currentLocation?.coordinate.latitude)!, longitude: (currentLocation?.coordinate.longitude)!)
-        marker.title = "You are here"
-        marker.snippet = currentUserAddress ?? "Krasauuuucheg"
-        marker.map = mapView
-        marker.icon = #imageLiteral(resourceName: "marker")
+        let myLocationMarker = GMSMarker()
+        myLocationMarker.position = CLLocationCoordinate2D(latitude: (currentLocation?.coordinate.latitude)!, longitude: (currentLocation?.coordinate.longitude)!)
+        myLocationMarker.title = "You are here"
+        myLocationMarker.snippet = currentUserAddress ?? ""
+        myLocationMarker.map = mapView
+        myLocationMarker.icon = #imageLiteral(resourceName: "marker")
         
         locationManager.stopUpdatingLocation()
         
@@ -195,17 +202,22 @@ class MainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-        mapView.clear()
+        //mapView.clear()
         addMarker(coordinate: coordinate)
     }
     
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        marker.map = nil
+        return true
+    }
+    
     func addMarker(coordinate: CLLocationCoordinate2D) {
-        let marker = GMSMarker()
+        //let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
         marker.title = "Initial point"
         marker.snippet = ""
         marker.map = mapView
-        marker.icon = #imageLiteral(resourceName: "marker")
+        marker.icon = #imageLiteral(resourceName: "green_marker")
     }
 
     

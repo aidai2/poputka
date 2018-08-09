@@ -19,6 +19,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         ratingNumber.textColor = Colors.ratingNumberColor
         ratingNumber.font = UIFont(name: "Roboto-Bold", size: 48)
         ratingCircleView.backgroundColor = UIColor.white

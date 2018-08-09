@@ -42,7 +42,10 @@ class RegistrationViewController: UIViewController {
     @IBAction func registredButton(_ sender: BlueButton) {
         let user = NewUser(phone: phoneTextField.text!, password: passwordTextField.text!, password_repeat: passwordTextField.text!, city_id:  cityId, is_driver: isDriver)
         ServerManager.shared.createUser(user: user, { (user) in
-            
+          
+            DataManager.shared.setUser(user: user)
+            let vc = self.viewControllerWith(identifier: "SidebarOverlay", storyboard: "Main")
+            self.present(vc, animated: true, completion: nil)
         }, error: showErrorAlert)
     }
     

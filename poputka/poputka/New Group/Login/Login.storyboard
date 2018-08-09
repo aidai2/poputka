@@ -120,6 +120,10 @@
                         <viewLayoutGuide key="safeArea" id="RYp-yM-bzD"/>
                     </view>
                     <navigationItem key="navigationItem" id="LZp-qV-rAP"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="oIU-Mk-1gn" id="5YC-8S-MXh"/>
+                        <outlet property="phoneTextField" destination="Zn5-h8-ykF" id="8rh-DA-hcy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tda-uk-jup" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
