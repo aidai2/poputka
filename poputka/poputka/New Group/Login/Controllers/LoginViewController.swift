@@ -25,6 +25,9 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func forgotPassword(_ sender: UIButton) {
+//        let sb = UIStoryboard.init(name: "Recovery", bundle: nil)
+//        let vc = sb.instantiateViewController(withIdentifier: "RecoveryPhoneViewController")
+//        present(vc, animated: true, completion: nil)
         present(storyboard: "Recovery", viewController:"RecoveryPhoneViewController")
     }
     

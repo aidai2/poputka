@@ -77,7 +77,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     @objc private func settingButtonClicked () {
         let route = CreateRoute(description: "", available_seats: 2, isDriver: true, isBag: true, isLocal: true, start_address: "adad", end_address: "ADad", start_latitude: String(describing: currentLocation?.coordinate.latitude), start_longitude: String(describing: currentLocation?.coordinate.longitude), end_latitude: String(marker.position.latitude), end_longitude: String(marker.position.longitude), start_time: 1000000000, points: [])
         ServerManager.shared.route(route: route, { (route) in
-            print("gegegei")
+            print("route created")
         }, error: showErrorAlert)
         //seetupJellySetting()
     }
